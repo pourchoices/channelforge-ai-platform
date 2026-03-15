@@ -53,7 +53,7 @@ const HeroSection = () => {
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
                 <div className="h-3 w-3 rounded-full bg-destructive/60" />
-                <div className="h-3 w-3 rounded-full bg-yellow-500/60" />
+                <div className="h-3 w-3 rounded-full bg-muted-foreground/40" />
                 <div className="h-3 w-3 rounded-full bg-success/60" />
               </div>
               <span className="text-xs text-muted-foreground font-mono">channelforge.ai/dashboard</span>
