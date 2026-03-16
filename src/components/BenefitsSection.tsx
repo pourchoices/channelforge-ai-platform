@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { Search, Award, Clock, PhoneIncoming } from "lucide-react";
+import { PhoneIncoming, Award, Clock, Search } from "lucide-react";
 
 const benefits = [
   {
     icon: Search,
     title: "Show Up When Homeowners Search",
-    description: "Your business appears when homeowners search YouTube for solutions.",
+    description: "When a homeowner searches YouTube for repair help, your business is the one they find — and call.",
   },
   {
     icon: Award,
-    title: "Become The Trusted Local Expert",
-    description: "Educational videos position your company as the authority in your area.",
+    title: "Become The Go-To Contractor",
+    description: "Helpful videos position you as the trusted local expert homeowners want to hire.",
   },
   {
     icon: Clock,
-    title: "Evergreen Traffic",
-    description: "Videos continue generating leads for years.",
+    title: "Leads That Never Stop",
+    description: "Unlike ads that stop when you stop paying, videos keep generating inbound calls for years.",
   },
   {
     icon: PhoneIncoming,
-    title: "More Inbound Calls",
-    description: "Homeowners who trust your content contact your business.",
+    title: "More Calls, More Booked Jobs",
+    description: "Homeowners who watch your content pick up the phone and book — no cold calling required.",
   },
 ];
 

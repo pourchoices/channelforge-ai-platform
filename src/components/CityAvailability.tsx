@@ -21,10 +21,10 @@ const CityAvailability = () => {
         >
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Limited Availability</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em] mb-4">
-            Own Your City's <span className="gradient-text">Lead Channel</span>
+            Claim Your City <span className="gradient-text">Before Your Competitor Does</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Only one contractor per service area can claim a lead channel. Once a market is taken, it's gone.
+            We only partner with one contractor per service area. Once a market is claimed, it's locked — and your competitor gets the calls instead of you.
           </p>
         </motion.div>
 
@@ -53,8 +53,8 @@ const CityAvailability = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="xl" className="btn-glow">
-            Check If Your City Is Available <ArrowRight className="ml-1 h-5 w-5" />
+          <Button variant="hero" size="xl" className="btn-glow" asChild>
+            <a href="#check-availability">Check If Your City Is Available <ArrowRight className="ml-1 h-5 w-5" /></a>
           </Button>
         </div>
       </div>
