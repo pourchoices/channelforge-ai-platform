@@ -8,14 +8,14 @@ const Footer = () => {
           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary">
             <Zap className="h-3.5 w-3.5 text-primary-foreground" />
           </div>
-          <span className="font-display text-sm font-bold text-foreground">ChannelForge AI</span>
+          <span className="font-display text-sm font-bold text-foreground">ChannelForge Leads</span>
         </div>
         <div className="flex items-center gap-6 text-xs text-muted-foreground">
           <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
           <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-          <a href="#" className="hover:text-foreground transition-colors">Contact</a>
+          <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </div>
-        <p className="text-xs text-muted-foreground">© 2026 ChannelForge AI. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground">© 2026 ChannelForge Leads. All rights reserved.</p>
       </div>
     </footer>
   );

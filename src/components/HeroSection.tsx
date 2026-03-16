@@ -5,7 +5,6 @@ import { ArrowRight, PhoneCall } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
-      {/* Background glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-primary/8 blur-[150px] animate-pulse-glow pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
 
@@ -22,7 +21,7 @@ const HeroSection = () => {
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 mb-8"
         >
           <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-medium text-primary">Limited Availability Per City</span>
+          <span className="text-xs font-medium text-primary">Only One Contractor Per City — Claim Yours</span>
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
@@ -31,19 +30,19 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 font-body">
-          We build and manage YouTube channels that bring homeowners searching for solutions directly to your business.
+          We build and manage YouTube channels that bring homeowners searching for repair solutions directly to your phone.
         </p>
 
         <p className="text-sm text-muted-foreground/80 max-w-xl mx-auto mb-10">
-          We work with only one business per service area to ensure our clients dominate their local market.
+          We work with only one contractor per service area. Once your city is claimed, your competitors are locked out.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button variant="hero" size="xl" className="btn-glow">
-            Get My YouTube Lead Engine <ArrowRight className="ml-1 h-5 w-5" />
+          <Button variant="hero" size="xl" className="btn-glow" asChild>
+            <a href="#check-availability">Check If Your City Is Available <ArrowRight className="ml-1 h-5 w-5" /></a>
           </Button>
-          <Button variant="hero-outline" size="xl">
-            <PhoneCall className="mr-1 h-5 w-5" /> Book a Strategy Call
+          <Button variant="hero-outline" size="xl" asChild>
+            <a href="#contact"><PhoneCall className="mr-1 h-5 w-5" /> Book a Strategy Call</a>
           </Button>
         </div>
       </motion.div>

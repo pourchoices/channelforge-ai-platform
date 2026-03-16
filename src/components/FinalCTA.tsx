@@ -16,18 +16,18 @@ const FinalCTA = () => {
 
           <div className="relative z-10">
             <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em] mb-6">
-              Start Building Your YouTube{" "}
-              <span className="gradient-text">Lead Engine</span>
+              Start Getting Inbound Calls{" "}
+              <span className="gradient-text">From YouTube</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-10 text-lg">
-              Stop relying only on ads and start building evergreen traffic that brings homeowners to your business every month.
+              Stop relying only on paid ads. Build a YouTube lead channel that brings homeowners directly to your phone — every month, on autopilot.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="hero" size="xl" className="btn-glow">
-                Start My Channel <ArrowRight className="ml-1 h-5 w-5" />
+              <Button variant="hero" size="xl" className="btn-glow" asChild>
+                <a href="#check-availability">Check If Your City Is Available <ArrowRight className="ml-1 h-5 w-5" /></a>
               </Button>
-              <Button variant="hero-outline" size="xl">
-                <MapPin className="mr-1 h-5 w-5" /> Check Availability
+              <Button variant="hero-outline" size="xl" asChild>
+                <a href="#contact"><MapPin className="mr-1 h-5 w-5" /> Book a Strategy Call</a>
               </Button>
             </div>
           </div>

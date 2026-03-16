@@ -5,28 +5,30 @@ import { ArrowRight, Youtube, MapPin, CheckCircle } from "lucide-react";
 const strategies = [
   {
     title: "Build Your Own Channel",
-    description: "We build and manage a fully branded YouTube channel for your business designed to generate long-term homeowner traffic.",
+    description: "We build and manage a fully branded YouTube channel for your business — designed to generate inbound calls from homeowners searching for help in your area.",
     icon: Youtube,
     features: [
-      "Custom YouTube channel setup",
-      "Local search topic research",
+      "Custom YouTube channel in your brand",
+      "Local homeowner search topic research",
       "Script writing and video production",
-      "Thumbnails and publishing",
-      "Ongoing content management",
+      "Thumbnails, SEO, and publishing",
+      "Ongoing content that generates calls",
     ],
     cta: "Start My Channel",
+    href: "#contact",
   },
   {
     title: "Claim a Lead Channel",
-    description: "We build and grow YouTube channels targeting homeowner search traffic in specific cities. If a channel exists in your market, you can claim the lead flow.",
+    description: "We've already built YouTube channels generating homeowner traffic in specific cities. If your market is available, you can claim exclusive access to the leads.",
     icon: MapPin,
     features: [
-      "Pre-built YouTube lead channels",
-      "Existing homeowner search traffic",
-      "Exclusive city availability",
-      "Leads routed directly to your business",
+      "Pre-built channels with existing traffic",
+      "Inbound calls from homeowners in your city",
+      "Exclusive — one contractor per market",
+      "Leads routed directly to your phone",
     ],
-    cta: "Check Availability",
+    cta: "Check If Your City Is Available",
+    href: "#check-availability",
   },
 ];
 
@@ -40,7 +42,7 @@ const LeadStrategy = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Your Options</p>
+          <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Two Ways To Get Leads</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
             Choose Your <span className="gradient-text">Lead Strategy</span>
           </h2>
@@ -74,8 +76,8 @@ const LeadStrategy = () => {
                 ))}
               </ul>
 
-              <Button variant="hero" size="lg" className="w-full btn-glow">
-                {s.cta} <ArrowRight className="ml-1 h-4 w-4" />
+              <Button variant="hero" size="lg" className="w-full btn-glow" asChild>
+                <a href={s.href}>{s.cta} <ArrowRight className="ml-1 h-4 w-4" /></a>
               </Button>
             </motion.div>
           ))}

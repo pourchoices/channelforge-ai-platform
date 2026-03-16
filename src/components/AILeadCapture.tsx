@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Phone, Bot, ClipboardList, CalendarCheck, Database } from "lucide-react";
 
 const features = [
-  { icon: Phone, label: "Dedicated tracking phone numbers" },
-  { icon: Bot, label: "AI receptionist answering calls 24/7" },
-  { icon: ClipboardList, label: "Lead capture and call recording" },
-  { icon: CalendarCheck, label: "Automatic appointment booking" },
-  { icon: Database, label: "GoHighLevel CRM integration" },
+  { icon: Phone, label: "Dedicated tracking phone numbers for every channel" },
+  { icon: Bot, label: "AI receptionist answers homeowner calls 24/7" },
+  { icon: ClipboardList, label: "Every call recorded and logged as a lead" },
+  { icon: CalendarCheck, label: "Jobs booked automatically on your calendar" },
+  { icon: Database, label: "All leads managed in your GoHighLevel CRM" },
 ];
 
 const AILeadCapture = () => {
@@ -19,12 +19,12 @@ const AILeadCapture = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Automation Built In</p>
+          <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Never Miss A Lead</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            AI-Powered <span className="gradient-text">Lead Capture</span> System
+            Every Call <span className="gradient-text">Captured & Booked</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
-            Every lead channel includes an automated system that captures, qualifies, and books leads — so you never miss a homeowner ready to hire.
+            When a homeowner calls from your YouTube channel, our system answers, qualifies, and books the job — so you never lose a lead.
           </p>
         </motion.div>
 

@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Search, FileText, Video, Youtube, UserCheck, ArrowDown } from "lucide-react";
 
 const steps = [
-  { icon: Search, label: "Homeowner Search Topics" },
-  { icon: FileText, label: "Script Creation" },
-  { icon: Video, label: "Video Production" },
-  { icon: Youtube, label: "YouTube Publishing" },
-  { icon: UserCheck, label: "Local Leads" },
+  { icon: Search, label: "Homeowner Searches YouTube for Help" },
+  { icon: FileText, label: "We Script Content Around Their Questions" },
+  { icon: Video, label: "Videos Are Produced and Published" },
+  { icon: Youtube, label: "Your Channel Ranks in Local Searches" },
+  { icon: UserCheck, label: "Homeowners Call Your Business" },
 ];
 
 const HowItWorks = () => {
