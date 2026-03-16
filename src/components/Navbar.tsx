@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Lead Strategy", href: "#lead-strategy" },
-  { label: "Availability", href: "#city-availability" },
+  { label: "Availability", href: "#availability" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -29,7 +29,7 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <Button variant="hero" size="sm" asChild>
-            <a href="#check-availability">Check Availability</a>
+            <a href="#availability">Check Availability</a>
           </Button>
         </div>
 
@@ -46,7 +46,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="hero" size="sm" className="w-full mt-2" asChild>
-            <a href="#check-availability">Check Availability</a>
+            <a href="#availability">Check Availability</a>
           </Button>
         </div>
       )}
