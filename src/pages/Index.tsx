@@ -1,11 +1,14 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import BenefitsSection from "@/components/BenefitsSection";
 import HowItWorks from "@/components/HowItWorks";
-import WhoThisIsFor from "@/components/WhoThisIsFor";
-import PlatformPreview from "@/components/PlatformPreview";
-import PricingSection from "@/components/PricingSection";
+import LeadStrategy from "@/components/LeadStrategy";
+import CityAvailability from "@/components/CityAvailability";
+import CityForm from "@/components/CityForm";
 import ExampleVideos from "@/components/ExampleVideos";
-import Testimonials from "@/components/Testimonials";
+import AILeadCapture from "@/components/AILeadCapture";
+import WhyYouTube from "@/components/WhyYouTube";
+import ContactSection from "@/components/ContactSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -14,12 +17,15 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
+      <BenefitsSection />
       <HowItWorks />
-      <WhoThisIsFor />
-      <PlatformPreview />
-      <PricingSection />
+      <LeadStrategy />
+      <CityAvailability />
+      <CityForm />
       <ExampleVideos />
-      <Testimonials />
+      <AILeadCapture />
+      <WhyYouTube />
+      <ContactSection />
       <FinalCTA />
       <Footer />
     </div>
