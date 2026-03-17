@@ -31,6 +31,10 @@ const FinalCTA = () => {
               </a>
             </Button>
           </div>
+
+          <p className="mt-6 text-sm text-muted-foreground font-medium italic">
+            We only partner with serious contractors ready to dominate their local market.
+          </p>
           
           <p className="mt-8 text-sm text-muted-foreground font-semibold uppercase tracking-widest">
             ● Exclusive Territory Protection ● No Ad Spend Required ● 100% Done-For-You
