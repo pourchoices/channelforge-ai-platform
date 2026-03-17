@@ -1,60 +1,57 @@
 import { motion } from "framer-motion";
-import { PhoneIncoming, Award, Clock, Search } from "lucide-react";
+import { PhoneCall, MapPin, Search, Calendar } from "lucide-react";
 
 const benefits = [
   {
+    icon: PhoneCall,
+    title: "Inbound Calls",
+    description: "Homeowners call you directly. No chasing leads or cold calling required."
+  },
+  {
+    icon: MapPin,
+    title: "City Exclusivity",
+    description: "We work with one contractor per city. Once you're in, your competitors are locked out."
+  },
+  {
     icon: Search,
-    title: "Show Up When Homeowners Search",
-    description: "When a homeowner searches YouTube for repair help, your business is the one they find — and call.",
+    title: "High Intent",
+    description: "YouTube users are searching for solutions. They are ready to book a repair now."
   },
   {
-    icon: Award,
-    title: "Become The Go-To Contractor",
-    description: "Helpful videos position you as the trusted local expert homeowners want to hire.",
-  },
-  {
-    icon: Clock,
-    title: "Leads That Never Stop",
-    description: "Unlike ads that stop when you stop paying, videos keep generating inbound calls for years.",
-  },
-  {
-    icon: PhoneIncoming,
-    title: "More Calls, More Booked Jobs",
-    description: "Homeowners who watch your content pick up the phone and book — no cold calling required.",
-  },
+    icon: Calendar,
+    title: "Evergreen ROI",
+    description: "Videos continue to generate leads for years after they are posted. Pure profit."
+  }
 ];
 
 const BenefitsSection = () => {
   return (
-    <section className="section-padding">
-      <div className="container mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">The Advantage</p>
+    <section id="benefits" className="pt-12 pb-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Why YouTube?</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            What This Means for <span className="gradient-text">Your Business</span>
+            The Most Powerful Lead Source <span className="gradient-text">for Contractors</span>
           </h2>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((b, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((benefit, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card rounded-2xl p-7 text-center hover:border-primary/30 transition-all duration-300"
+              className="glass-card p-8 rounded-2xl border border-border/50 hover:border-primary/30 transition-all group"
             >
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 mb-5">
-                <b.icon className="h-6 w-6 text-primary" />
+              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <benefit.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="font-display text-base font-bold text-foreground mb-2">{b.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{b.description}</p>
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">{benefit.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {benefit.description}
+              </p>
             </motion.div>
           ))}
         </div>
