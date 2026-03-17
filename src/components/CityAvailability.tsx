@@ -1,20 +1,21 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { MapPin, ArrowRight, Lock, AlertCircle } from "lucide-react";
+import { Lock, AlertCircle } from "lucide-react";
 
 const CityAvailability = () => {
   return (
     <section id="availability" className="section-padding bg-secondary/10">
-      <div className="container mx-auto max-w-2xl">
+      <div className="container mx-auto max-w-2xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="mb-10"
         >
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground mb-4">
             Check If Your City Is <span className="gradient-text">Still Available</span>
           </h2>
+          
           <div className="flex flex-col items-center gap-2 mb-8">
             <div className="flex items-center gap-2 text-primary font-bold bg-primary/10 px-4 py-2 rounded-lg border border-primary/20">
               <AlertCircle className="h-5 w-5" />
@@ -37,33 +38,36 @@ const CityAvailability = () => {
           </div>
           
           <form className="space-y-5 relative z-10" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">Business Type</label>
-                <input placeholder="e.g. HVAC, Plumbing" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors" />
+                <input placeholder="e.g. HVAC, Plumbing" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">City</label>
-                <input placeholder="Your city" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors" />
+                <input placeholder="Your city" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">State</label>
-                <input placeholder="State" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors" />
+                <input placeholder="State" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">Your Name</label>
-                <input placeholder="Full name" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors" />
+                <input placeholder="Full name" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
               </div>
             </div>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 text-left">
               <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">Business Email</label>
-              <input type="email" placeholder="name@company.com" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors" />
+              <input type="email" placeholder="name@company.com" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
             </div>
             <Button variant="hero" size="xl" className="w-full btn-glow text-lg mt-4">
               Check Availability
             </Button>
+            <p className="text-[11px] text-center text-muted-foreground mt-4 italic">
+              Note: We review market requests manually to ensure exclusivity.
+            </p>
           </form>
         </motion.div>
       </div>
