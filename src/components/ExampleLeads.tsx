@@ -3,31 +3,10 @@ import { Eye, PhoneIncoming, CalendarCheck, TrendingUp, Wallet, ArrowRight } fro
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { 
-    icon: Eye, 
-    label: "Local Homeowners Reached", 
-    value: "3,400", 
-    color: "text-foreground" 
-  },
-  { 
-    icon: PhoneIncoming, 
-    label: "Inbound Calls", 
-    value: "29", 
-    color: "text-primary" 
-  },
-  { 
-    icon: CalendarCheck, 
-    label: "Booked Jobs", 
-    value: "11", 
-    color: "text-primary" 
-  },
-  { 
-    icon: Wallet, 
-    label: "Average Job Value", 
-    value: "$1,600", 
-    color: "text-primary",
-    featured: true 
-  },
+  { icon: Eye, label: "Local Homeowners Reached", value: "3,400", color: "text-foreground" },
+  { icon: PhoneIncoming, label: "Inbound Calls", value: "29", color: "text-primary" },
+  { icon: CalendarCheck, label: "Booked Jobs", value: "11", color: "text-primary" },
+  { icon: Wallet, label: "Average Job Value", value: "$1,600", color: "text-primary", featured: true },
 ];
 
 const typicalJobs = [
@@ -51,9 +30,14 @@ const ExampleLeads = () => {
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
             Real Inbound Calls From <span className="gradient-text">One YouTube Channel</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
-            Here’s what a single YouTube lead channel can produce for a local contractor in just one month.
-          </p>
+          <div className="mt-4 space-y-2">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Here’s what a single YouTube lead channel can produce for a local contractor in just one month.
+            </p>
+            <p className="text-primary font-semibold text-sm">
+              No paid ads. No cold outreach. Just homeowners actively searching for help.
+            </p>
+          </div>
         </motion.div>
 
         <motion.div
@@ -72,7 +56,6 @@ const ExampleLeads = () => {
             </div>
           </div>
 
-          {/* Stats Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {stats.map((stat, i) => (
               <motion.div
@@ -82,9 +65,7 @@ const ExampleLeads = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className={`text-center p-6 rounded-xl transition-all duration-300 ${
-                  stat.featured 
-                    ? "bg-primary/10 border border-primary/20 shadow-[0_0_20px_rgba(234,88,12,0.1)]" 
-                    : "bg-secondary/50"
+                  stat.featured ? "bg-primary/10 border border-primary/20 shadow-[0_0_20px_rgba(234,88,12,0.1)]" : "bg-secondary/50"
                 }`}
               >
                 <div className={`inline-flex h-10 w-10 rounded-lg items-center justify-center mb-4 ${
@@ -93,19 +74,18 @@ const ExampleLeads = () => {
                   <stat.icon className="h-5 w-5" />
                 </div>
                 <p className={`font-display text-2xl md:text-3xl font-black mb-1 ${stat.color}`}>{stat.value}</p>
-                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">{stat.label}</p>
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </div>
 
-          {/* Typical Jobs Subsection */}
           <div className="pt-8 border-t border-border/20 text-center">
             <h4 className="font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wide">
               Typical Jobs Generated From YouTube Leads
             </h4>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {typicalJobs.map((job, idx) => (
-                <div key={idx} className="bg-secondary/40 border border-border/30 rounded-xl p-4 flex flex-col items-center">
+                <div key={idx} className="bg-secondary/40 border border-border/30 rounded-lg p-4 flex flex-col items-center">
                   <span className="text-xs font-semibold text-muted-foreground mb-1">{job.name}</span>
                   <span className="text-md font-bold text-primary">{job.value}</span>
                 </div>
@@ -115,17 +95,12 @@ const ExampleLeads = () => {
               Typical job values. Actual results vary by service and location.
             </p>
           </div>
-
-          <p className="text-center text-sm text-muted-foreground mt-10 italic">
-            These are real inbound calls from homeowners searching YouTube for HVAC help — no paid ads, no cold outreach.
-          </p>
         </motion.div>
 
-        {/* CTA Button */}
         <div className="flex justify-center mt-12">
           <Button variant="hero" size="xl" className="btn-glow" asChild>
             <a href="#availability">
-              Check If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
+              Check If Your City Is Still Available <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>
