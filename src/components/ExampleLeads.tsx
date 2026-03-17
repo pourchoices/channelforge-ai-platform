@@ -3,10 +3,31 @@ import { Eye, PhoneIncoming, CalendarCheck, TrendingUp, Wallet, ArrowRight } fro
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { icon: Eye, label: "Local Homeowners Reached", value: "3,400", color: "text-foreground" },
-  { icon: PhoneIncoming, label: "Inbound Calls", value: "29", color: "text-primary" },
-  { icon: CalendarCheck, label: "Booked Jobs", value: "11", color: "text-primary" },
-  { icon: Wallet, label: "Average Job Value", value: "$1,600", color: "text-primary", featured: true },
+  { 
+    icon: Eye, 
+    label: "Local Homeowners Reached", 
+    value: "3,400", 
+    color: "text-foreground" 
+  },
+  { 
+    icon: PhoneIncoming, 
+    label: "Inbound Calls", 
+    value: "29", 
+    color: "text-primary" 
+  },
+  { 
+    icon: CalendarCheck, 
+    label: "Booked Jobs", 
+    value: "11", 
+    color: "text-primary" 
+  },
+  { 
+    icon: Wallet, 
+    label: "Average Job Value", 
+    value: "$1,600", 
+    color: "text-primary",
+    featured: true 
+  },
 ];
 
 const typicalJobs = [
@@ -19,7 +40,7 @@ const typicalJobs = [
 const ExampleLeads = () => {
   return (
     <section id="proof" className="section-padding bg-secondary/20">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-5xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +60,7 @@ const ExampleLeads = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card gradient-border rounded-2xl p-8 md:p-12 max-w-4xl mx-auto shadow-2xl"
+          className="glass-card gradient-border rounded-2xl p-8 md:p-12 max-w-5xl mx-auto shadow-2xl"
         >
           <div className="flex items-center gap-3 mb-8">
             <div className="h-11 w-11 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -51,6 +72,7 @@ const ExampleLeads = () => {
             </div>
           </div>
 
+          {/* Stats Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {stats.map((stat, i) => (
               <motion.div
@@ -60,7 +82,9 @@ const ExampleLeads = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className={`text-center p-6 rounded-xl transition-all duration-300 ${
-                  stat.featured ? "bg-primary/10 border border-primary/20 shadow-[0_0_20px_rgba(234,88,12,0.1)]" : "bg-secondary/50"
+                  stat.featured 
+                    ? "bg-primary/10 border border-primary/20 shadow-[0_0_20px_rgba(234,88,12,0.1)]" 
+                    : "bg-secondary/50"
                 }`}
               >
                 <div className={`inline-flex h-10 w-10 rounded-lg items-center justify-center mb-4 ${
@@ -69,18 +93,19 @@ const ExampleLeads = () => {
                   <stat.icon className="h-5 w-5" />
                 </div>
                 <p className={`font-display text-2xl md:text-3xl font-black mb-1 ${stat.color}`}>{stat.value}</p>
-                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{stat.label}</p>
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">{stat.label}</p>
               </motion.div>
             ))}
           </div>
 
+          {/* Typical Jobs Subsection */}
           <div className="pt-8 border-t border-border/20 text-center">
             <h4 className="font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wide">
               Typical Jobs Generated From YouTube Leads
             </h4>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {typicalJobs.map((job, idx) => (
-                <div key={idx} className="bg-secondary/40 border border-border/30 rounded-lg p-4 flex flex-col items-center">
+                <div key={idx} className="bg-secondary/40 border border-border/30 rounded-xl p-4 flex flex-col items-center">
                   <span className="text-xs font-semibold text-muted-foreground mb-1">{job.name}</span>
                   <span className="text-md font-bold text-primary">{job.value}</span>
                 </div>
@@ -96,6 +121,7 @@ const ExampleLeads = () => {
           </p>
         </motion.div>
 
+        {/* CTA Button */}
         <div className="flex justify-center mt-12">
           <Button variant="hero" size="xl" className="btn-glow" asChild>
             <a href="#availability">
