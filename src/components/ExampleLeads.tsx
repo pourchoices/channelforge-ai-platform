@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Eye, PhoneIncoming, CalendarCheck, TrendingUp, Wallet, DollarSign } from "lucide-react";
+import { Eye, PhoneIncoming, CalendarCheck, TrendingUp, Wallet, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const stats = [
   { icon: Eye, label: "Local Homeowners Reached", value: "3,400", color: "text-foreground" },
@@ -17,8 +18,8 @@ const typicalJobs = [
 
 const ExampleLeads = () => {
   return (
-    <section id="proof" className="pt-16 pb-12 bg-secondary/20">
-      <div className="container mx-auto max-w-5xl px-4">
+    <section id="proof" className="section-padding bg-secondary/20">
+      <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +39,7 @@ const ExampleLeads = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card gradient-border rounded-2xl p-8 md:p-12 max-w-5xl mx-auto shadow-2xl"
+          className="glass-card gradient-border rounded-2xl p-8 md:p-12 max-w-4xl mx-auto shadow-2xl"
         >
           <div className="flex items-center gap-3 mb-8">
             <div className="h-11 w-11 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -59,9 +60,7 @@ const ExampleLeads = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className={`text-center p-6 rounded-xl transition-all duration-300 ${
-                  stat.featured 
-                    ? "bg-primary/10 border border-primary/20 shadow-[0_0_20px_rgba(234,88,12,0.1)]" 
-                    : "bg-secondary/50"
+                  stat.featured ? "bg-primary/10 border border-primary/20 shadow-[0_0_20px_rgba(234,88,12,0.1)]" : "bg-secondary/50"
                 }`}
               >
                 <div className={`inline-flex h-10 w-10 rounded-lg items-center justify-center mb-4 ${
@@ -70,24 +69,24 @@ const ExampleLeads = () => {
                   <stat.icon className="h-5 w-5" />
                 </div>
                 <p className={`font-display text-2xl md:text-3xl font-black mb-1 ${stat.color}`}>{stat.value}</p>
-                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">{stat.label}</p>
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </div>
 
-          <div className="pt-8 border-t border-border/20">
-            <h4 className="text-center font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wide">
+          <div className="pt-8 border-t border-border/20 text-center">
+            <h4 className="font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wide">
               Typical Jobs Generated From YouTube Leads
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {typicalJobs.map((job, idx) => (
-                <div key={idx} className="bg-secondary/40 border border-border/30 rounded-lg p-4 flex flex-col items-center justify-center">
-                  <span className="text-sm font-semibold text-muted-foreground mb-1">{job.name}</span>
-                  <span className="text-lg font-bold text-primary">{job.value}</span>
+                <div key={idx} className="bg-secondary/40 border border-border/30 rounded-lg p-4 flex flex-col items-center">
+                  <span className="text-xs font-semibold text-muted-foreground mb-1">{job.name}</span>
+                  <span className="text-md font-bold text-primary">{job.value}</span>
                 </div>
               ))}
             </div>
-            <p className="text-center text-[10px] text-muted-foreground mt-4 italic">
+            <p className="text-[10px] text-muted-foreground mt-4 italic">
               Typical job values. Actual results vary by service and location.
             </p>
           </div>
@@ -96,6 +95,14 @@ const ExampleLeads = () => {
             These are real inbound calls from homeowners searching YouTube for HVAC help — no paid ads, no cold outreach.
           </p>
         </motion.div>
+
+        <div className="flex justify-center mt-12">
+          <Button variant="hero" size="xl" className="btn-glow" asChild>
+            <a href="#availability">
+              Check If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );
