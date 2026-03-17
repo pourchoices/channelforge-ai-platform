@@ -5,22 +5,22 @@ const benefits = [
   {
     icon: PhoneCall,
     title: "Inbound Calls",
-    description: "Homeowners call you directly. No chasing leads or cold calling required."
+    description: "Homeowners call you directly when they have a problem. No chasing weak leads or cold calling required—just ready-to-buy customers."
   },
   {
     icon: MapPin,
     title: "City Exclusivity",
-    description: "We work with one contractor per city. Once you're in, your competitors are locked out."
+    description: "We work with only one contractor per city. Once you claim your territory, your local competitors are permanently locked out."
   },
   {
     icon: Search,
-    title: "High Intent",
-    description: "YouTube users are searching for solutions. They are ready to book a repair now."
+    title: "High-Value Leads",
+    description: "YouTube users searching for repairs have higher intent than social media scrollers. They are ready to book a high-ticket job now."
   },
   {
     icon: Calendar,
     title: "Evergreen ROI",
-    description: "Videos continue to generate leads for years after they are posted. Pure profit."
+    description: "Unlike paid ads that stop the second you stop paying, these videos continue to generate leads for years. It's an asset, not an expense."
   }
 ];
 
@@ -31,7 +31,7 @@ const BenefitsSection = () => {
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Why YouTube?</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            The Most Powerful Lead Source <span className="gradient-text">for Contractors</span>
+            The Most Powerful Way to <span className="gradient-text">Dominate Your Local Market</span>
           </h2>
         </div>
 
