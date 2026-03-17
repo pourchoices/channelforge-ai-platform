@@ -65,11 +65,6 @@ const ExampleVideos = () => {
                     <Play className="h-8 w-8 fill-current ml-1" />
                   </div>
                 </div>
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-bold text-white uppercase tracking-widest border border-white/10">
-                    {video.category}
-                  </span>
-                </div>
               </div>
               <h3 className="font-display text-xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors line-clamp-2">
                 {video.title}
