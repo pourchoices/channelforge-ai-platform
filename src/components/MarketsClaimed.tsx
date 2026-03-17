@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Lock, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
+import { Lock, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const claimedMarkets = [
@@ -23,6 +23,9 @@ const MarketsClaimed = () => {
           <h2 className="font-display text-3xl md:text-4xl font-extrabold text-foreground mb-4">
             Markets Being <span className="gradient-text">Claimed By Contractors</span>
           </h2>
+          <p className="text-primary font-bold uppercase tracking-wide mb-2">
+            Once a city is claimed, it is permanently closed.
+          </p>
           <p className="text-muted-foreground">
             Only one contractor per city can own the YouTube lead channel. Once claimed, it's gone for your competitors.
           </p>
