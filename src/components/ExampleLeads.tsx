@@ -74,12 +74,16 @@ const ExampleLeads = () => {
                   <stat.icon className="h-5 w-5" />
                 </div>
                 <p className={`font-display text-2xl md:text-3xl font-black mb-1 ${stat.color}`}>{stat.value}</p>
-                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{stat.label}</p>
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">{stat.label}</p>
               </motion.div>
             ))}
           </div>
 
-          <div className="pt-8 border-t border-border/20 text-center">
+          <p className="text-center text-sm font-medium text-muted-foreground/90 mt-6 px-4">
+            These are real calls from homeowners actively searching for services.
+          </p>
+
+          <div className="pt-8 border-t border-border/20 text-center mt-8">
             <h4 className="font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wide">
               Typical Jobs Generated From YouTube Leads
             </h4>
@@ -100,7 +104,7 @@ const ExampleLeads = () => {
         <div className="flex justify-center mt-12">
           <Button variant="hero" size="xl" className="btn-glow" asChild>
             <a href="#availability">
-              Check If Your City Is Still Available <ArrowRight className="ml-2 h-5 w-5" />
+              See If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>
