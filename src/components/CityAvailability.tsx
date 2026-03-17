@@ -67,7 +67,7 @@ const CityAvailability = () => {
                 Check Availability
               </Button>
               <p className="text-[11px] text-center text-muted-foreground mt-4 italic">
-                Note: We review every submission within 24 hours to ensure exclusivity.
+                We review every submission within 24 hours.
               </p>
             </div>
           </form>
