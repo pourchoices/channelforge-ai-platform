@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "mramer-motion";
 import { Search, MapPin, PhoneCall, ShieldCheck } from "lucide-react";
 
 const strategies = [
@@ -31,7 +31,7 @@ const LeadStrategy = () => {
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">The Strategy</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em] mb-6">
-            Two Ways to Own Your <span className="gradient-text">Local Market</span>
+            Two Ways to <span className="gradient-text">Claim Your City</span>
           </h2>
           <p className="text-lg text-primary font-bold mb-8 uppercase tracking-wide">
             Most contractors start by claiming an existing lead channel.
