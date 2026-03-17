@@ -21,42 +21,73 @@ const CityForm = () => {
             </p>
           </div>
 
-          <form action="https://formspree.io/f/xdawpgqq" method="POST" className="space-y-4">
+          <form 
+            action="https://formspree.io/f/xdawpgqq" 
+            method="POST" 
+            className="space-y-4"
+          >
+            {/* Hidden Inputs for Formspree Configuration */}
             <input type="hidden" name="formType" value="city-availability" />
             <input type="hidden" name="_subject" value="New City Availability Request" />
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Business Type</label>
-                <Input name="businessType" placeholder="e.g. HVAC, Plumbing, Roofing" className="bg-secondary border-border" required />
+                <Input 
+                  name="businessType" 
+                  placeholder="e.g. HVAC, Plumbing, Roofing" 
+                  className="bg-secondary border-border" 
+                  required 
+                />
               </div>
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">City</label>
-                <Input name="city" placeholder="Your city" className="bg-secondary border-border" required />
+                <Input 
+                  name="city" 
+                  placeholder="Your city" 
+                  className="bg-secondary border-border" 
+                  required 
+                />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">State</label>
-                <Input name="state" placeholder="State" className="bg-secondary border-border" required />
+                <Input 
+                  name="state" 
+                  placeholder="State" 
+                  className="bg-secondary border-border" 
+                  required 
+                />
               </div>
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Name</label>
-                <Input name="name" placeholder="Your name" className="bg-secondary border-border" required />
+                <Input 
+                  name="name" 
+                  placeholder="Your name" 
+                  className="bg-secondary border-border" 
+                  required 
+                />
               </div>
             </div>
             <div>
               <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Email</label>
-              <Input name="email" type="email" placeholder="you@company.com" className="bg-secondary border-border" required />
+              <Input 
+                name="email" 
+                type="email" 
+                placeholder="you@company.com" 
+                className="bg-secondary border-border" 
+                required 
+              />
             </div>
-            <div className="pt-2">
-              <Button type="submit" variant="hero" size="lg" className="w-full btn-glow">
-                Check Availability
-              </Button>
-              <p className="text-[11px] text-center text-muted-foreground/80 mt-4 italic">
-                We’ll confirm availability and next steps on a quick call.
-              </p>
-            </div>
+            <Button 
+              type="submit" 
+              variant="hero" 
+              size="lg" 
+              className="w-full btn-glow mt-2"
+            >
+              Check Availability
+            </Button>
           </form>
         </motion.div>
       </div>
