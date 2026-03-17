@@ -21,12 +21,9 @@ const CityForm = () => {
             </p>
           </div>
 
-          <form 
-            action="https://formspree.io/f/xdawpgqq" 
-            method="POST" 
-            className="space-y-4"
-          >
+          <form action="https://formspree.io/f/xdawpgqq" method="POST" className="space-y-4">
             <input type="hidden" name="formType" value="city-availability" />
+            <input type="hidden" name="_subject" value="New City Availability Request" />
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
