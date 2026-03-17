@@ -1,53 +1,82 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Lead Strategy", href: "#lead-strategy" },
-  { label: "Availability", href: "#availability" },
-  { label: "Contact", href: "#contact" },
-];
+import { Menu, X, Youtube } from "lucide-react";
 
 const Navbar = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Benefits", href: "#benefits" },
+    { name: "How It Works", href: "#how-it-works" },
+    { name: "Proof", href: "#proof" },
+    { name: "Availability", href: "#city-availability" },
+  ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <span className="font-display text-lg font-bold text-foreground">
-          ChannelForge <span className="text-primary">Leads</span>
-        </span>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "py-3 glass shadow-lg" : "py-5 bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+        <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <div className="h-10 w-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+            <Youtube className="text-white h-6 w-6" />
+          </div>
+          <span className="font-display text-xl font-black tracking-tight text-foreground">
+            CHANNEL<span className="text-primary">FORGE</span>
+          </span>
+        </div>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              {link.label}
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-bold text-foreground/80 hover:text-primary transition-colors uppercase tracking-widest"
+            >
+              {link.name}
             </a>
           ))}
-        </div>
-
-        <div className="hidden md:block">
-          <Button variant="hero" size="sm" asChild>
-            <a href="#availability">Check Availability</a>
+          <Button variant="hero" size="sm" className="btn-glow px-6" asChild>
+            <a href="https://calendly.com/channelforge/strategy-call">Book Call</a>
           </Button>
         </div>
 
-        <button className="md:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        <button
+          className="md:hidden text-foreground"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
 
-      {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl px-4 py-4 space-y-3">
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block text-sm text-muted-foreground hover:text-foreground py-2">
-              {link.label}
-            </a>
-          ))}
-          <Button variant="hero" size="sm" className="w-full mt-2" asChild>
-            <a href="#availability">Check Availability</a>
-          </Button>
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 glass border-b border-border/40 animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="flex flex-col p-6 gap-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-lg font-bold text-foreground py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+            <Button variant="hero" className="w-full mt-2" asChild>
+              <a href="https://calendly.com/channelforge/strategy-call">Book Strategy Call</a>
+            </Button>
+          </div>
         </div>
       )}
     </nav>
