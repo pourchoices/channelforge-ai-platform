@@ -21,34 +21,40 @@ const CityForm = () => {
             </p>
           </div>
 
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form 
+            action="https://formspree.io/f/xdawpgqq" 
+            method="POST" 
+            className="space-y-4"
+          >
+            <input type="hidden" name="formType" value="city-availability" />
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Business Type</label>
-                <Input placeholder="e.g. HVAC, Plumbing, Roofing" className="bg-secondary border-border" />
+                <Input name="businessType" placeholder="e.g. HVAC, Plumbing, Roofing" className="bg-secondary border-border" required />
               </div>
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">City</label>
-                <Input placeholder="Your city" className="bg-secondary border-border" />
+                <Input name="city" placeholder="Your city" className="bg-secondary border-border" required />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">State</label>
-                <Input placeholder="State" className="bg-secondary border-border" />
+                <Input name="state" placeholder="State" className="bg-secondary border-border" required />
               </div>
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Name</label>
-                <Input placeholder="Your name" className="bg-secondary border-border" />
+                <Input name="name" placeholder="Your name" className="bg-secondary border-border" required />
               </div>
             </div>
             <div>
               <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Email</label>
-              <Input type="email" placeholder="you@company.com" className="bg-secondary border-border" />
+              <Input name="email" type="email" placeholder="you@company.com" className="bg-secondary border-border" required />
             </div>
             <div className="pt-2">
-              <Button variant="hero" size="lg" className="w-full btn-glow" asChild>
-                <a href="https://calendly.com/channelforge/strategy-call">Check Availability</a>
+              <Button type="submit" variant="hero" size="lg" className="w-full btn-glow">
+                Check Availability
               </Button>
               <p className="text-[11px] text-center text-muted-foreground/80 mt-4 italic">
                 We’ll confirm availability and next steps on a quick call.
