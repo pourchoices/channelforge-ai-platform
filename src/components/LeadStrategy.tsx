@@ -1,4 +1,4 @@
-import { motion } from "mramer-motion";
+import { motion } from "framer-motion";
 import { Search, MapPin, PhoneCall, ShieldCheck } from "lucide-react";
 
 const strategies = [
