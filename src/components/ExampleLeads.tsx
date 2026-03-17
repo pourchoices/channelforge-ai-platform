@@ -1,12 +1,32 @@
 import { motion } from "framer-motion";
-import { Eye, PhoneIncoming, CalendarCheck, TrendingUp, DollarSign, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Eye, PhoneIncoming, CalendarCheck, TrendingUp, DollarSign, Wallet } from "lucide-react";
 
 const stats = [
-  { icon: Eye, label: "Local Homeowners Reached", value: "3,400", color: "text-foreground" },
-  { icon: PhoneIncoming, label: "Inbound Calls", value: "29", color: "text-primary" },
-  { icon: CalendarCheck, label: "Booked Jobs", value: "11", color: "text-primary" },
-  { icon: DollarSign, label: "Estimated Revenue Generated", value: "$18,000+", color: "text-primary", featured: true },
+  { 
+    icon: Eye, 
+    label: "Local Homeowners Reached", 
+    value: "3,400", 
+    color: "text-foreground" 
+  },
+  { 
+    icon: PhoneIncoming, 
+    label: "Inbound Calls", 
+    value: "29", 
+    color: "text-primary" 
+  },
+  { 
+    icon: CalendarCheck, 
+    label: "Booked Jobs", 
+    value: "11", 
+    color: "text-primary" 
+  },
+  { 
+    icon: Wallet, 
+    label: "Average Job Value", 
+    value: "$1,600", 
+    color: "text-primary",
+    featured: true 
+  },
 ];
 
 const ExampleLeads = () => {
@@ -32,7 +52,7 @@ const ExampleLeads = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card gradient-border rounded-2xl p-8 md:p-12 max-w-4xl mx-auto shadow-2xl"
+          className="glass-card gradient-border rounded-2xl p-8 md:p-12 max-w-5xl mx-auto shadow-2xl"
         >
           <div className="flex items-center gap-3 mb-8">
             <div className="h-11 w-11 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -53,7 +73,9 @@ const ExampleLeads = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className={`text-center p-6 rounded-xl transition-all duration-300 ${
-                  stat.featured ? "bg-primary/10 border border-primary/20" : "bg-secondary/50"
+                  stat.featured 
+                    ? "bg-primary/10 border border-primary/20 shadow-[0_0_20px_rgba(234,88,12,0.1)]" 
+                    : "bg-secondary/50"
                 }`}
               >
                 <div className={`inline-flex h-10 w-10 rounded-lg items-center justify-center mb-4 ${
@@ -62,7 +84,7 @@ const ExampleLeads = () => {
                   <stat.icon className="h-5 w-5" />
                 </div>
                 <p className={`font-display text-2xl md:text-3xl font-black mb-1 ${stat.color}`}>{stat.value}</p>
-                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{stat.label}</p>
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">{stat.label}</p>
               </motion.div>
             ))}
           </div>
