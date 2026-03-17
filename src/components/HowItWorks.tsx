@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import { Search, FileText, Video, Youtube, UserCheck, ArrowDown } from "lucide-react";
+import { Search, Video, Youtube, PhoneCall, DollarSign, ArrowDown } from "lucide-react";
 
 const steps = [
-  { icon: Search, label: "Homeowner Searches YouTube for Help" },
-  { icon: FileText, label: "We Script Content Around Their Questions" },
-  { icon: Video, label: "Videos Are Produced and Published" },
-  { icon: Youtube, label: "Your Channel Ranks in Local Searches" },
-  { icon: UserCheck, label: "Homeowners Call Your Business" },
+  { icon: Search, label: "We identify high-intent searches in your city" },
+  { icon: Video, label: "We create videos targeting those searches" },
+  { icon: Youtube, label: "Your videos rank on YouTube" },
+  { icon: PhoneCall, label: "Homeowners call directly from the videos" },
+  { icon: DollarSign, label: "You close high-value jobs" },
 ];
 
 const HowItWorks = () => {
   return (
     <section id="how-it-works" className="section-padding">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-4xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
