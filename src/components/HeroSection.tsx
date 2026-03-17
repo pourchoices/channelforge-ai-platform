@@ -47,15 +47,22 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          <div className="space-y-3">
-            <p className="text-sm text-muted-foreground">
-              Homeowners are already searching YouTube for your services every day.
+          <div className="space-y-4">
+            <p className="text-sm text-muted-foreground font-medium">
+              We generate inbound calls from homeowners actively searching for your service in your city.
             </p>
-            <p className="text-xs font-medium text-foreground/80 flex items-center justify-center gap-4">
-              <span>✔ No ads</span>
-              <span>✔ No cold calling</span>
-              <span>✔ No lead buying</span>
-            </p>
+            
+            <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground/80">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No ads
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No cold calling
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No lead buying
+              </span>
+            </div>
           </div>
         </div>
       </motion.div>
