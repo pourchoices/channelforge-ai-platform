@@ -24,6 +24,9 @@ const CityAvailability = () => {
               </div>
               <span className="text-sm md:text-base">Once a city is claimed, it is permanently closed.</span>
             </div>
+            <p className="text-muted-foreground max-w-lg mt-4 font-medium italic">
+              We only accept a limited number of contractors each month to maintain lead quality.
+            </p>
           </div>
         </motion.div>
 
@@ -67,7 +70,7 @@ const CityAvailability = () => {
                 Check Availability
               </Button>
               <p className="text-[11px] text-center text-muted-foreground mt-4 italic">
-                We review every submission within 24 hours.
+                Note: We review every submission within 24 hours.
               </p>
             </div>
           </form>
