@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Eye, PhoneIncoming, CalendarCheck, TrendingUp, DollarSign, Wallet } from "lucide-react";
+import { Eye, PhoneIncoming, CalendarCheck, TrendingUp, Wallet } from "lucide-react";
 
 const stats = [
   { 
@@ -41,7 +41,7 @@ const ExampleLeads = () => {
         >
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">REAL RESULTS</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            Example Leads From <span className="gradient-text">a Channel</span>
+            Real Inbound Calls From <span className="gradient-text">One Channel</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
             Here’s what a single YouTube lead channel can produce for a local contractor in just one month.
