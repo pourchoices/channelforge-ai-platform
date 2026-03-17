@@ -29,13 +29,14 @@ const HeroSection = () => {
           <span className="gradient-text">Lead Channel</span> Before Your Competitor Does
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-2 font-body">
-          We build and manage YouTube lead channels that send homeowners searching for repairs directly to your phone.
-        </p>
-
-        <p className="text-md font-bold text-foreground mb-10 uppercase tracking-wide">
-          No ads. No cold outreach. Just inbound calls.
-        </p>
+        <div className="space-y-4 mb-10">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-body">
+            We build and manage YouTube lead channels that send homeowners searching for repairs directly to your phone.
+          </p>
+          <p className="text-md md:text-lg font-bold text-foreground uppercase tracking-wide">
+            No ads. No cold outreach. Just inbound calls.
+          </p>
+        </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <Button variant="hero" size="xl" className="btn-glow" asChild>
