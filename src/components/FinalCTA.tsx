@@ -13,10 +13,10 @@ const FinalCTA = () => {
           viewport={{ once: true }}
         >
           <h2 className="font-display text-4xl md:text-6xl font-black text-foreground mb-6 leading-tight">
-            Start Getting Inbound <span className="gradient-text">Calls From YouTube</span>
+            Start Getting Inbound <span className="gradient-text">Calls From YouTube</span> Before Your Competitor Does
           </h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-            Own the YouTube search traffic in your city before your competitor does. Once a market is claimed, it's locked.
+            Own the YouTube search traffic in your city before someone else claims it. Once your service area is locked, it's gone.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -33,7 +33,7 @@ const FinalCTA = () => {
           </div>
           
           <p className="mt-8 text-sm text-muted-foreground font-semibold uppercase tracking-widest">
-            ● Exclusive Territory Protection ● No Ad Spend Required
+            ● Exclusive Territory Protection ● No Ad Spend Required ● 100% Done-For-You
           </p>
         </motion.div>
       </div>
