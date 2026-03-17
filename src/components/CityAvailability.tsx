@@ -24,9 +24,6 @@ const CityAvailability = () => {
               </div>
               <span className="text-sm md:text-base">Once a city is claimed, it is permanently closed.</span>
             </div>
-            <p className="text-muted-foreground max-w-lg mt-4 font-medium">
-              We review market requests manually to ensure our clients dominate their local search traffic without internal competition.
-            </p>
           </div>
         </motion.div>
 
@@ -65,12 +62,17 @@ const CityAvailability = () => {
               <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">Business Email</label>
               <input type="email" placeholder="name@company.com" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
             </div>
-            <Button variant="hero" size="xl" className="w-full btn-glow text-lg mt-4">
-              Check Availability
-            </Button>
-            <p className="text-[11px] text-center text-muted-foreground mt-4 italic">
-              Note: Availability is first-come, first-served.
-            </p>
+            <div className="pt-2">
+              <Button variant="hero" size="xl" className="w-full btn-glow text-lg mt-4">
+                Check Availability
+              </Button>
+              <p className="text-sm font-bold text-primary mt-4">
+                ✓ Takes less than 30 seconds
+              </p>
+              <p className="text-[11px] text-center text-muted-foreground mt-2 italic">
+                Note: We review market requests manually to ensure exclusivity.
+              </p>
+            </div>
           </form>
         </motion.div>
       </div>
