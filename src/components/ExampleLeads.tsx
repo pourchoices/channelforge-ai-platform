@@ -74,16 +74,16 @@ const ExampleLeads = () => {
                   <stat.icon className="h-5 w-5" />
                 </div>
                 <p className={`font-display text-2xl md:text-3xl font-black mb-1 ${stat.color}`}>{stat.value}</p>
-                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">{stat.label}</p>
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </div>
-
-          <p className="text-center text-sm font-medium text-muted-foreground/90 mt-6 px-4">
-            These are real calls from homeowners actively searching for services.
+          
+          <p className="text-center text-sm font-bold text-foreground mb-8">
+            That’s thousands in booked jobs from a single channel.
           </p>
 
-          <div className="pt-8 border-t border-border/20 text-center mt-8">
+          <div className="pt-8 border-t border-border/20 text-center">
             <h4 className="font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wide">
               Typical Jobs Generated From YouTube Leads
             </h4>
