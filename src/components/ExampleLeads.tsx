@@ -56,7 +56,7 @@ const ExampleLeads = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
@@ -74,12 +74,12 @@ const ExampleLeads = () => {
                   <stat.icon className="h-5 w-5" />
                 </div>
                 <p className={`font-display text-2xl md:text-3xl font-black mb-1 ${stat.color}`}>{stat.value}</p>
-                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{stat.label}</p>
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">{stat.label}</p>
               </motion.div>
             ))}
           </div>
           
-          <p className="text-center text-sm font-bold text-foreground mb-8">
+          <p className="text-center text-sm font-bold text-foreground mb-12">
             That’s thousands in booked jobs from a single channel.
           </p>
 
@@ -103,7 +103,7 @@ const ExampleLeads = () => {
 
         <div className="flex justify-center mt-12">
           <Button variant="hero" size="xl" className="btn-glow" asChild>
-            <a href="#availability">
+            <a href="#city-availability">
               See If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
