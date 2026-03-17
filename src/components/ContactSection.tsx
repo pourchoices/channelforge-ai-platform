@@ -7,7 +7,7 @@ import { PhoneCall, Send } from "lucide-react";
 const ContactSection = () => {
   return (
     <section id="contact" className="section-padding">
-      <div className="container mx-auto max-w-2xl">
+      <div className="container mx-auto max-w-2xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,9 +15,12 @@ const ContactSection = () => {
           className="text-center mb-10"
         >
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Get In Touch</p>
-          <h2 className="font-display text-3xl md:text-4xl font-extrabold text-foreground tracking-[-0.02em]">
+          <h2 className="font-display text-3xl md:text-4xl font-extrabold text-foreground tracking-[-0.02em] mb-4">
             Contact Our Team
           </h2>
+          <p className="text-muted-foreground font-medium">
+            Prefer to talk? Call or text us directly.
+          </p>
         </motion.div>
 
         <motion.div
@@ -57,10 +60,10 @@ const ContactSection = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Button variant="hero" size="lg" className="flex-1 btn-glow">
-                <Send className="mr-1 h-4 w-4" /> Send Message
+                <Send className="mr-1 h-4 w-4" /> Request Access
               </Button>
               <Button variant="hero-outline" size="lg" className="flex-1">
-                <PhoneCall className="mr-1 h-4 w-4" /> Book Strategy Call
+                <PhoneCall className="mr-1 h-4 w-4" /> Book Quick Call
               </Button>
             </div>
           </form>
