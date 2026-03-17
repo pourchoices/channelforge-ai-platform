@@ -5,7 +5,8 @@ const videos = [
   {
     category: "HVAC",
     title: "Emergency AC Repair in Oklahoma City: 3 Signs You Need Help Fast",
-    thumbnail: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80&w=800",
+    // Updated with a fresh HVAC service image link
+    thumbnail: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800",
   },
   {
     category: "Roofing",
@@ -40,11 +41,15 @@ const ExampleVideos = () => {
               transition={{ delay: i * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 border border-border/50">
+              <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 border border-border/50 bg-secondary/20">
                 <img
                   src={video.thumbnail}
                   alt={video.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    // Fallback in case of local loading issues
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop";
+                  }}
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="h-16 w-16 rounded-full bg-primary flex items-center justify-center text-white shadow-xl shadow-primary/40">
