@@ -37,12 +37,12 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="hero" size="xl" className="btn-glow" asChild>
               <a href="#availability">
-                Check If Your City Is Still Available <ArrowRight className="ml-2 h-5 w-5" />
+                See If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
               <a href="/schedule-call">
-                <PhoneCall className="mr-2 h-5 w-5" /> Book a Strategy Call
+                <PhoneCall className="mr-2 h-5 w-5" /> Book a Quick Call
               </a>
             </Button>
           </div>
