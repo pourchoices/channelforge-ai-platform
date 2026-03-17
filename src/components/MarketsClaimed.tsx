@@ -3,16 +3,16 @@ import { Lock, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const claimedMarkets = [
-  { market: "Dallas Roofing", status: "claimed", activity: true },
+  { market: "Dallas Roofing", status: "claimed" },
   { market: "Phoenix HVAC", status: "claimed" },
   { market: "Tulsa Plumbing", status: "available" },
-  { market: "OKC Pest Control", status: "available", activity: true },
+  { market: "OKC Pest Control", status: "available" },
   { market: "Atlanta Landscaping", status: "claimed" },
 ];
 
 const MarketsClaimed = () => {
   return (
-    <section className="pt-12 pb-12 border-y border-border/40">
+    <section className="section-padding border-y border-border/40">
       <div className="container mx-auto max-w-4xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,25 +39,19 @@ const MarketsClaimed = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className={`glass-card rounded-xl p-5 flex items-center justify-between relative overflow-hidden ${
+              className={`glass-card rounded-xl p-5 flex items-center justify-between ${
                 item.status === "claimed" ? "opacity-50 grayscale" : "border-primary/20 bg-primary/5 shadow-sm"
               }`}
             >
-              <div className="flex items-center gap-4 relative z-10">
-                <div className={`h-10 w-10 rounded-full flex items-center justify-center relative ${
+              <div className="flex items-center gap-4">
+                <div className={`h-10 w-10 rounded-full flex items-center justify-center ${
                   item.status === "claimed" ? "bg-muted" : "bg-primary/20"
                 }`}>
                   {item.status === "claimed" ? <Lock className="h-4 w-4" /> : <MapPin className="h-4 w-4 text-primary" />}
-                  {item.activity && (
-                    <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-                    </span>
-                  )}
                 </div>
                 <span className="font-display font-bold text-foreground">{item.market}</span>
               </div>
-              <span className={`text-[10px] font-black uppercase tracking-widest relative z-10 ${
+              <span className={`text-[10px] font-black uppercase tracking-widest ${
                 item.status === "available" ? "text-green-500" : "text-muted-foreground"
               }`}>
                 {item.status === "available" ? "✓ Available" : "Claimed"}
