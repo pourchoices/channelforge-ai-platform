@@ -21,7 +21,7 @@ const HeroSection = () => {
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 mb-8"
         >
           <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per City Can Claim The Channel</span>
+          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per City — Claim Yours</span>
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
@@ -29,14 +29,9 @@ const HeroSection = () => {
           <span className="gradient-text">Lead Channel</span> Before Your Competitor Does
         </h1>
 
-        <div className="space-y-4 mb-10">
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-body">
-            We build and manage YouTube lead channels that send homeowners searching for repairs directly to your phone.
-          </p>
-          <p className="text-md md:text-lg font-bold text-foreground uppercase tracking-wide">
-            No ads. No cold outreach. Just inbound calls.
-          </p>
-        </div>
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body">
+          We build and manage YouTube channels that bring homeowners searching for your services directly to your phone.
+        </p>
 
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -52,20 +47,22 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          <p className="text-xs md:text-sm text-muted-foreground italic">
-            Homeowners are already searching YouTube for your services daily.
-          </p>
-
-          <div className="flex items-center justify-center gap-6 pt-2">
-            <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground/70 uppercase tracking-wide">
-              <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No ads
-            </span>
-            <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground/70 uppercase tracking-wide">
-              <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No cold calling
-            </span>
-            <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground/70 uppercase tracking-wide">
-              <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No lead buying
-            </span>
+          <div className="space-y-4">
+            <p className="text-sm text-muted-foreground">
+              Homeowners are already searching YouTube for your services every day.
+            </p>
+            
+            <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground/80">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No ads
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No cold calling
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No lead buying
+              </span>
+            </div>
           </div>
         </div>
       </motion.div>
