@@ -16,7 +16,7 @@ const FinalCTA = () => {
             Check If Your City Is <span className="gradient-text">Available Before It's Gone</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-            We only work with one contractor per city. Once it's taken, it's locked.
+            Once a city is claimed, we do not open it again.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
