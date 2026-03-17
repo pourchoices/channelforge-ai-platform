@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Lock, AlertCircle } from "lucide-react";
+import { Lock, AlertCircle, ShieldCheck } from "lucide-react";
 
 const CityAvailability = () => {
   return (
     <section id="availability" className="section-padding bg-secondary/10">
-      <div className="container mx-auto max-w-2xl text-center">
+      <div className="container mx-auto max-w-2xl text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ const CityAvailability = () => {
             <div className="flex flex-col items-center gap-2 text-primary font-bold bg-primary/10 px-6 py-4 rounded-lg border border-primary/20">
               <div className="flex items-center gap-2">
                 <AlertCircle className="h-5 w-5" />
-                <span>We only work with ONE contractor per service area.</span>
+                <span>Only one contractor per city is accepted.</span>
               </div>
               <span className="text-sm md:text-base">Once a city is claimed, it is permanently closed.</span>
             </div>
@@ -33,8 +33,8 @@ const CityAvailability = () => {
           viewport={{ once: true }}
           className="glass-card gradient-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 p-4 opacity-10">
-            <Lock className="h-24 w-24" />
+          <div className="absolute top-0 right-0 p-6 opacity-20 text-primary">
+            <Lock className="h-16 w-16 md:h-24 md:w-24" />
           </div>
           
           <form className="space-y-5 relative z-10" onSubmit={(e) => e.preventDefault()}>
@@ -66,12 +66,14 @@ const CityAvailability = () => {
               <Button variant="hero" size="xl" className="w-full btn-glow text-lg mt-4">
                 Check Availability
               </Button>
-              <p className="text-sm font-bold text-primary mt-4">
-                ✓ Takes less than 30 seconds
-              </p>
-              <p className="text-[11px] text-center text-muted-foreground mt-2 italic">
-                Note: We review market requests manually to ensure exclusivity.
-              </p>
+              <div className="flex flex-col gap-2 mt-4">
+                <p className="text-sm font-bold text-primary flex items-center justify-center gap-1.5">
+                  <ShieldCheck className="h-4 w-4" /> ✓ Takes less than 30 seconds
+                </p>
+                <p className="text-[11px] text-center text-muted-foreground italic">
+                  We review every submission within 24 hours.
+                </p>
+              </div>
             </div>
           </form>
         </motion.div>
