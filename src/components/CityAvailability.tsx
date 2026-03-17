@@ -67,9 +67,12 @@ const CityAvailability = () => {
             </div>
             <div className="pt-2">
               <Button variant="hero" size="xl" className="w-full btn-glow text-lg mt-4">
-                Check Availability
+                See If Your City Is Available
               </Button>
-              <p className="text-[11px] text-center text-muted-foreground mt-4 italic">
+              <p className="text-sm font-semibold text-primary mt-4">
+                No commitment. We’ll just show you if your city is available.
+              </p>
+              <p className="text-[11px] text-center text-muted-foreground mt-2 italic">
                 Note: We review every submission within 24 hours.
               </p>
             </div>
