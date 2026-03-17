@@ -6,19 +6,19 @@ const videos = [
   {
     category: "HVAC",
     title: "Emergency AC Repair in Oklahoma City: 3 Signs You Need Help Fast",
-    thumbnail: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800",
+    thumbnail: "/images/hvac-thumbnail.jpg",
     videoUrl: "https://www.youtube.com/embed/UQH0BStPFms?autoplay=1",
   },
   {
     category: "ROOFING",
     title: "Oklahoma City Roof Leak? What Homeowners Should Check Before Calling",
-    thumbnail: "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&q=80&w=800",
+    thumbnail: "/images/roofing-thumbnail.jpg",
     videoUrl: "https://www.youtube.com/embed/4so-kmjj6io?autoplay=1",
   },
   {
     category: "PLUMBING",
     title: "Burst Pipe or Bad Water Pressure? When OKC Homeowners Should Call a Plumber",
-    thumbnail: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800",
+    thumbnail: "/images/plumbing-thumbnail.jpg",
     videoUrl: "https://www.youtube.com/embed/vZKuonvCU_8?autoplay=1",
   },
 ];
