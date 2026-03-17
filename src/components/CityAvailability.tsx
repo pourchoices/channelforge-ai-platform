@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Lock, AlertCircle, ShieldCheck } from "lucide-react";
+import { Lock, AlertCircle } from "lucide-react";
 
 const CityAvailability = () => {
   return (
@@ -33,8 +33,8 @@ const CityAvailability = () => {
           viewport={{ once: true }}
           className="glass-card gradient-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 p-6 opacity-20 text-primary">
-            <Lock className="h-16 w-16 md:h-24 md:w-24" />
+          <div className="absolute top-0 right-0 p-4 opacity-10">
+            <Lock className="h-24 w-24" />
           </div>
           
           <form className="space-y-5 relative z-10" onSubmit={(e) => e.preventDefault()}>
@@ -66,14 +66,9 @@ const CityAvailability = () => {
               <Button variant="hero" size="xl" className="w-full btn-glow text-lg mt-4">
                 Check Availability
               </Button>
-              <div className="flex flex-col gap-2 mt-4">
-                <p className="text-sm font-bold text-primary flex items-center justify-center gap-1.5">
-                  <ShieldCheck className="h-4 w-4" /> ✓ Takes less than 30 seconds
-                </p>
-                <p className="text-[11px] text-center text-muted-foreground italic">
-                  We review every submission within 24 hours.
-                </p>
-              </div>
+              <p className="text-[11px] text-center text-muted-foreground mt-4 italic">
+                Note: We review every submission within 24 hours to ensure exclusivity.
+              </p>
             </div>
           </form>
         </motion.div>
