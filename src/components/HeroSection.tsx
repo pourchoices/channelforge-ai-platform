@@ -21,7 +21,7 @@ const HeroSection = () => {
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 mb-8"
         >
           <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-medium text-primary uppercase tracking-wider">Only One Contractor Per City — Claim Yours</span>
+          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per City Can Claim The Channel</span>
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
@@ -29,18 +29,18 @@ const HeroSection = () => {
           <span className="gradient-text">Lead Channel</span> Before Your Competitor Does
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 font-body">
-          We build and manage YouTube channels that bring homeowners searching for repairs directly to your business.
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-2 font-body">
+          We build and manage YouTube lead channels that send homeowners searching for repairs directly to your phone.
         </p>
 
-        <p className="text-sm text-muted-foreground/80 max-w-xl mx-auto mb-10 italic">
-          We only work with one contractor per service area so our clients dominate their local market.
+        <p className="text-md font-bold text-foreground mb-10 uppercase tracking-wide">
+          No ads. No cold outreach. Just inbound calls.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <Button variant="hero" size="xl" className="btn-glow" asChild>
             <a href="#availability">
-              Check If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
+              Check If Your City Is Still Available <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
           <Button variant="hero-outline" size="xl" asChild>
@@ -50,7 +50,6 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        {/* Trust Bullets */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto pt-4 border-t border-border/40">
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
             <CheckCircle2 className="h-4 w-4 text-primary" />
