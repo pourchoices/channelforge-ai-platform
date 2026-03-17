@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Search, Video, Youtube, PhoneCall, DollarSign, ArrowDown } from "lucide-react";
 
 const steps = [
-  { icon: Search, label: "We identify high-intent searches in your city" },
+  { icon: Search, label: "We find what homeowners are searching in your city" },
   { icon: Video, label: "We create videos targeting those searches" },
   { icon: Youtube, label: "Your videos rank on YouTube" },
   { icon: PhoneCall, label: "Homeowners call directly from the videos" },
-  { icon: DollarSign, label: "You close high-value jobs" },
+  { icon: DollarSign, label: "You close the jobs" },
 ];
 
 const HowItWorks = () => {
