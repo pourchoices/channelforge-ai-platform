@@ -2,11 +2,31 @@ import { motion } from "framer-motion";
 import { Search, Video, Youtube, PhoneCall, DollarSign, ArrowDown } from "lucide-react";
 
 const steps = [
-  { icon: Search, label: "We find what homeowners are searching in your city" },
-  { icon: Video, label: "We create videos targeting those searches" },
-  { icon: Youtube, label: "Your videos rank on YouTube" },
-  { icon: PhoneCall, label: "Homeowners call directly from the videos" },
-  { icon: DollarSign, label: "You close the jobs" },
+  { 
+    icon: Search, 
+    title: "Find Searches",
+    description: "We find what homeowners are searching in your city" 
+  },
+  { 
+    icon: Video, 
+    title: "Create Videos",
+    description: "We create videos targeting those searches" 
+  },
+  { 
+    icon: Youtube, 
+    title: "Rank on YouTube",
+    description: "Your videos appear when homeowners search" 
+  },
+  { 
+    icon: PhoneCall, 
+    title: "Inbound Calls",
+    description: "Homeowners call directly from the videos" 
+  },
+  { 
+    icon: DollarSign, 
+    title: "Close Jobs",
+    description: "You close high-value jobs" 
+  },
 ];
 
 const HowItWorks = () => {
@@ -25,7 +45,7 @@ const HowItWorks = () => {
           </h2>
         </motion.div>
 
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-6">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -33,20 +53,23 @@ const HowItWorks = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="w-full max-w-md"
+              className="w-full max-w-lg"
             >
-              <div className="glass-card rounded-2xl p-5 flex items-center gap-4 hover:border-primary/30 transition-all">
-                <div className="flex-shrink-0 h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <step.icon className="h-5 w-5 text-primary" />
+              <div className="glass-card rounded-2xl p-6 flex items-center gap-5 hover:border-primary/30 transition-all">
+                <div className="flex-shrink-0 h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center relative">
+                  <span className="absolute -top-2 -left-2 h-6 w-6 rounded-full bg-primary text-[10px] font-black text-white flex items-center justify-center">
+                    {i + 1}
+                  </span>
+                  <step.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <span className="text-xs text-primary font-semibold">STEP {i + 1}</span>
-                  <p className="font-display text-base font-bold text-foreground">{step.label}</p>
+                  <p className="font-display text-lg font-bold text-foreground leading-tight mb-1">{step.title}</p>
+                  <p className="text-sm text-muted-foreground leading-tight">{step.description}</p>
                 </div>
               </div>
               {i < steps.length - 1 && (
-                <div className="flex justify-center py-1">
-                  <ArrowDown className="h-5 w-5 text-primary/40" />
+                <div className="flex justify-center py-4">
+                  <ArrowDown className="h-6 w-6 text-primary/40" />
                 </div>
               )}
             </motion.div>
