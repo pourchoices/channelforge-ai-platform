@@ -17,12 +17,15 @@ const CityAvailability = () => {
           </h2>
           
           <div className="flex flex-col items-center gap-2 mb-8">
-            <div className="flex items-center gap-2 text-primary font-bold bg-primary/10 px-4 py-2 rounded-lg border border-primary/20">
-              <AlertCircle className="h-5 w-5" />
-              <span>We only work with ONE contractor per service area.</span>
+            <div className="flex flex-col items-center gap-2 text-primary font-bold bg-primary/10 px-6 py-4 rounded-lg border border-primary/20">
+              <div className="flex items-center gap-2">
+                <AlertCircle className="h-5 w-5" />
+                <span>We only work with ONE contractor per service area.</span>
+              </div>
+              <span className="text-sm md:text-base">Once a city is claimed, it is permanently closed.</span>
             </div>
-            <p className="text-muted-foreground max-w-lg mt-2 font-medium">
-              Once a city is claimed, it is permanently closed to ensure our clients dominate their local search traffic.
+            <p className="text-muted-foreground max-w-lg mt-4 font-medium">
+              We review market requests manually to ensure our clients dominate their local search traffic without internal competition.
             </p>
           </div>
         </motion.div>
@@ -66,7 +69,7 @@ const CityAvailability = () => {
               Check Availability
             </Button>
             <p className="text-[11px] text-center text-muted-foreground mt-4 italic">
-              Note: We review market requests manually to ensure exclusivity.
+              Note: Availability is first-come, first-served.
             </p>
           </form>
         </motion.div>
