@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 
 const CityForm = () => {
   return (
-    <section id="check-availability" className="section-padding">
+    <section id="city-availability" className="section-padding">
       <div className="container mx-auto max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
