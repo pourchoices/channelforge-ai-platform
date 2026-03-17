@@ -1,86 +1,66 @@
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Lock, AlertCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, PhoneCall } from "lucide-react";
 
-const CityAvailability = () => {
+const HeroSection = () => {
   return (
-    <section id="availability" className="section-padding bg-secondary/10">
-      <div className="container mx-auto max-w-2xl text-center px-4">
+    <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-primary/8 blur-[150px] animate-pulse-glow pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="relative z-10 text-center max-w-4xl mx-auto px-4"
+      >
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-10"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2 }}
+          className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 mb-8"
         >
-          <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground mb-4">
-            Check If Your City Is <span className="gradient-text">Still Available</span>
-          </h2>
-          
-          <div className="flex flex-col items-center gap-2 mb-8">
-            <div className="flex flex-col items-center gap-2 text-primary font-bold bg-primary/10 px-6 py-4 rounded-lg border border-primary/20">
-              <div className="flex items-center gap-2">
-                <AlertCircle className="h-5 w-5" />
-                <span>Only one contractor per city is accepted.</span>
-              </div>
-              <span className="text-sm md:text-base">Once a city is claimed, it is permanently closed.</span>
-            </div>
-            <p className="text-muted-foreground max-w-lg mt-4 font-medium italic">
-              We only accept a limited number of contractors each month to maintain lead quality.
+          <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per City — Claim Yours</span>
+        </motion.div>
+
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
+          Own Your City's YouTube{" "}
+          <span className="gradient-text">Lead Channel</span> Before Your Competitor Does
+        </h1>
+
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 font-body">
+          We build and manage YouTube channels that bring homeowners actively searching for your services directly to your phone.
+        </p>
+
+        <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button variant="hero" size="xl" className="btn-glow" asChild>
+              <a href="#city-availability">
+                See If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="hero-outline" size="xl" asChild>
+              <a href="https://calendly.com/channelforge/strategy-call">
+                <PhoneCall className="mr-2 h-5 w-5" /> Book a Quick Call
+              </a>
+            </Button>
+          </div>
+
+          <div className="space-y-3">
+            <p className="text-sm text-muted-foreground">
+              Homeowners are already searching YouTube for your services every day.
+            </p>
+            <p className="text-xs font-medium text-foreground/80 flex items-center justify-center gap-4">
+              <span>✔ No ads</span>
+              <span>✔ No cold calling</span>
+              <span>✔ No lead buying</span>
             </p>
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="glass-card gradient-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
-        >
-          <div className="absolute top-0 right-0 p-4 opacity-10">
-            <Lock className="h-24 w-24" />
-          </div>
-          
-          <form className="space-y-5 relative z-10" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">Business Type</label>
-                <input placeholder="e.g. HVAC, Plumbing" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
-              </div>
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">City</label>
-                <input placeholder="Your city" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">State</label>
-                <input placeholder="State" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
-              </div>
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">Your Name</label>
-                <input placeholder="Full name" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
-              </div>
-            </div>
-            <div className="space-y-1.5 text-left">
-              <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest ml-1">Business Email</label>
-              <input type="email" placeholder="name@company.com" className="w-full bg-secondary border border-border h-12 px-4 rounded-xl focus:outline-none focus:border-primary transition-colors text-foreground" />
-            </div>
-            <div className="pt-2">
-              <Button variant="hero" size="xl" className="w-full btn-glow text-lg mt-4">
-                See If Your City Is Available
-              </Button>
-              <p className="text-sm font-semibold text-primary mt-4">
-                No commitment. We’ll just show you if your city is available.
-              </p>
-              <p className="text-[11px] text-center text-muted-foreground mt-2 italic">
-                Note: We review every submission within 24 hours.
-              </p>
-            </div>
-          </form>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
 
-export default CityAvailability;
+export default HeroSection;
