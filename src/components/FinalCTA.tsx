@@ -1,36 +1,40 @@
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, PhoneCall } from "lucide-react";
 
 const FinalCTA = () => {
   return (
-    <section className="section-padding">
-      <div className="container mx-auto max-w-4xl">
+    <section className="section-padding bg-primary/5 relative overflow-hidden">
+      <div className="absolute -bottom-24 -right-24 h-96 w-96 bg-primary/10 rounded-full blur-[120px]" />
+      <div className="container mx-auto max-w-4xl text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card gradient-border rounded-3xl p-12 md:p-20 text-center relative overflow-hidden"
         >
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
-
-          <div className="relative z-10">
-            <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em] mb-6">
-              Start Getting Inbound Calls{" "}
-              <span className="gradient-text">From YouTube</span>
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto mb-10 text-lg">
-              Stop relying only on paid ads. Build a YouTube lead channel that brings homeowners directly to your phone — every month, on autopilot.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="hero" size="xl" className="btn-glow" asChild>
-                <a href="#check-availability">Check If Your City Is Available <ArrowRight className="ml-1 h-5 w-5" /></a>
-              </Button>
-              <Button variant="hero-outline" size="xl" asChild>
-                <a href="#contact"><MapPin className="mr-1 h-5 w-5" /> Book a Strategy Call</a>
-              </Button>
-            </div>
+          <h2 className="font-display text-4xl md:text-6xl font-black text-foreground mb-6 leading-tight">
+            Start Getting Inbound <span className="gradient-text">Calls From YouTube</span>
+          </h2>
+          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
+            Own the YouTube search traffic in your city before your competitor does. Once a market is claimed, it's locked.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button variant="hero" size="xl" className="btn-glow" asChild>
+              <a href="#availability">
+                Check If Your City Is Still Available <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="hero-outline" size="xl" asChild>
+              <a href="/schedule-call">
+                <PhoneCall className="mr-2 h-5 w-5" /> Book a Strategy Call
+              </a>
+            </Button>
           </div>
+          
+          <p className="mt-8 text-sm text-muted-foreground font-semibold uppercase tracking-widest">
+            ● Exclusive Territory Protection ● No Ad Spend Required
+          </p>
         </motion.div>
       </div>
     </section>
