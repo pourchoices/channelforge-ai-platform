@@ -4,7 +4,7 @@ import { ArrowRight, PhoneCall, CheckCircle2 } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-primary/8 blur-[150px] animate-pulse-glow pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center gap-6 mb-12">
+        <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="hero" size="xl" className="btn-glow" asChild>
               <a href="#availability">
@@ -51,19 +51,19 @@ const HeroSection = () => {
               </a>
             </Button>
           </div>
-          
+
           <p className="text-xs md:text-sm text-muted-foreground italic">
             Homeowners are already searching YouTube for your services daily.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 pt-2 border-t border-border/20 w-full max-w-2xl">
-            <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground/70 uppercase">
+          <div className="flex items-center justify-center gap-6 pt-2">
+            <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground/70 uppercase tracking-wide">
               <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No ads
             </span>
-            <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground/70 uppercase">
+            <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground/70 uppercase tracking-wide">
               <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No cold calling
             </span>
-            <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground/70 uppercase">
+            <span className="flex items-center gap-1.5 text-xs font-semibold text-foreground/70 uppercase tracking-wide">
               <CheckCircle2 className="h-3.5 w-3.5 text-primary" /> No lead buying
             </span>
           </div>
