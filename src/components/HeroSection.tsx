@@ -12,7 +12,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="relative z-10 text-center max-w-4xl mx-auto"
+        className="relative z-10 text-center max-w-4xl mx-auto px-4"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -21,41 +21,37 @@ const HeroSection = () => {
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 mb-8"
         >
           <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-medium text-primary">Only One Contractor Per City — Claim Yours</span>
+          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per City — Claim Yours</span>
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
           Own Your City's YouTube{" "}
-          <span className="gradient-text">Lead Channel</span>
+          <span className="gradient-text">Lead Channel</span> Before Your Competitor Does
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 font-body">
-          We build and manage YouTube channels that bring homeowners searching for repair solutions directly to your phone.
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 font-body">
+          We build and manage YouTube channels that bring homeowners actively searching for your services directly to your phone.
         </p>
 
-        <p className="text-sm text-muted-foreground/80 max-w-xl mx-auto mb-10">
-          We work with only one contractor per service area. Once your city is claimed, your competitors are locked out.
-        </p>
-
-        <div className="flex flex-col items-center justify-center gap-6">
+        <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="hero" size="xl" className="btn-glow" asChild>
-              <a href="https://calendly.com/channelforge/strategy-call">
-                Check If Your City Is Available <ArrowRight className="ml-1 h-5 w-5" />
+              <a href="#city-availability">
+                See If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
               <a href="https://calendly.com/channelforge/strategy-call">
-                <PhoneCall className="mr-1 h-5 w-5" /> Book a Strategy Call
+                <PhoneCall className="mr-2 h-5 w-5" /> Book a Quick Call
               </a>
             </Button>
           </div>
 
-          <div className="space-y-2">
-            <p className="text-sm text-muted-foreground italic">
+          <div className="space-y-3">
+            <p className="text-sm text-muted-foreground">
               Homeowners are already searching YouTube for your services every day.
             </p>
-            <p className="text-sm font-medium text-foreground/80 flex items-center justify-center gap-4">
+            <p className="text-xs font-medium text-foreground/80 flex items-center justify-center gap-4">
               <span>✔ No ads</span>
               <span>✔ No cold calling</span>
               <span>✔ No lead buying</span>
