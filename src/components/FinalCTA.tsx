@@ -15,8 +15,11 @@ const FinalCTA = () => {
           <h2 className="font-display text-4xl md:text-6xl font-black text-foreground mb-6 leading-tight">
             Start Getting Inbound Calls From YouTube — <span className="gradient-text">Before Your Competitor Does</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-            Once your city is claimed, we do not open it again. Own the search traffic in your city before someone else claims it.
+          <p className="text-xl text-muted-foreground mb-4 max-w-2xl mx-auto font-medium">
+            Once your city is claimed, we do not open it again.
+          </p>
+          <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
+            Own the search traffic in your city before someone else claims it. Once your service area is locked, it's gone.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
