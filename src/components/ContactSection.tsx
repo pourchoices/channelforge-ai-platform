@@ -29,40 +29,44 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="glass-card gradient-border rounded-2xl p-8 md:p-10"
         >
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form 
+            action="https://formspree.io/f/mqeygbzk" 
+            method="POST" 
+            className="space-y-4"
+          >
+            <input type="hidden" name="formType" value="contact" />
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Name</label>
-                <Input placeholder="Your name" className="bg-secondary border-border" />
+                <Input name="name" placeholder="Your name" className="bg-secondary border-border" required />
               </div>
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Email</label>
-                <Input type="email" placeholder="you@company.com" className="bg-secondary border-border" />
+                <Input name="email" type="email" placeholder="you@company.com" className="bg-secondary border-border" required />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Phone</label>
-                <Input type="tel" placeholder="(555) 000-0000" className="bg-secondary border-border" />
+                <Input name="phone" type="tel" placeholder="(555) 000-0000" className="bg-secondary border-border" required />
               </div>
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Business Type</label>
-                <Input placeholder="e.g. HVAC, Plumbing" className="bg-secondary border-border" />
+                <Input name="businessType" placeholder="e.g. HVAC, Plumbing" className="bg-secondary border-border" required />
               </div>
             </div>
             <div>
               <label className="text-xs font-medium text-muted-foreground mb-1.5 block">City</label>
-              <Input placeholder="Your city" className="bg-secondary border-border" />
+              <Input name="city" placeholder="Your city" className="bg-secondary border-border" required />
             </div>
             <div>
               <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Message</label>
-              <Textarea placeholder="Tell us about your business..." rows={4} className="bg-secondary border-border resize-none" />
+              <Textarea name="message" placeholder="Tell us about your business..." rows={4} className="bg-secondary border-border resize-none" required />
             </div>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <Button variant="hero" size="lg" className="flex-1 btn-glow" asChild>
-                <a href="https://calendly.com/channelforge/strategy-call">
-                  <Send className="mr-1 h-4 w-4" /> Book a Quick Call
-                </a>
+              <Button type="submit" variant="hero" size="lg" className="flex-1 btn-glow">
+                <Send className="mr-1 h-4 w-4" /> Send Message
               </Button>
               <Button variant="hero-outline" size="lg" className="flex-1" asChild>
                 <a href="https://calendly.com/channelforge/strategy-call">
