@@ -16,7 +16,7 @@ const FinalCTA = () => {
             Start Getting Inbound <span className="gradient-text">Calls From YouTube</span> Before Your Competitor Does
           </h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-            Own the YouTube search traffic in your city before someone else claims it. Once your service area is locked, it's gone.
+            Own the YouTube search traffic in your city before your competitor claims the channel.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
