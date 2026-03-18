@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Youtube } from "lucide-react";
+import { Menu, X, Youtube, Phone } from "lucide-material";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,7 +48,9 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="hero" size="sm" className="btn-glow px-6" asChild>
-            <a href="https://calendly.com/channelforge/strategy-call">Book Call</a>
+            <a href="tel:+14053381707">
+              <Phone className="mr-2 h-4 w-4" /> (405) 338-1707
+            </a>
           </Button>
         </div>
 
@@ -74,7 +76,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button variant="hero" className="w-full mt-2" asChild>
-              <a href="https://calendly.com/channelforge/strategy-call">Book Strategy Call</a>
+              <a href="tel:+14053381707">Call (405) 338-1707</a>
             </Button>
           </div>
         </div>
