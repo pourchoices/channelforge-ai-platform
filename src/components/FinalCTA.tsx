@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, PhoneCall } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 
 const FinalCTA = () => {
   return (
@@ -19,24 +19,31 @@ const FinalCTA = () => {
             Once a city is claimed, we do not open it again.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="xl" className="btn-glow" asChild>
-              <a href="#city-availability">
-                See If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="hero-outline" size="xl" asChild>
-              <a href="https://calendly.com/channelforge/strategy-call">
-                <PhoneCall className="mr-2 h-5 w-5" /> Book a Quick Call
-              </a>
-            </Button>
-          </div>
+          <div className="flex flex-col items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button variant="hero" size="xl" className="btn-glow" asChild>
+                <a href="tel:+14053381707">
+                  Call Now to See If Your Area Is Available <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="hero-outline" size="xl" asChild>
+                <a href="tel:+14053381707">
+                  <Phone className="mr-2 h-5 w-5" /> (405) 338-1707
+                </a>
+              </Button>
+            </div>
 
-          <p className="mt-6 text-sm text-muted-foreground font-medium italic">
-            We only partner with serious contractors ready to dominate their local market.
-          </p>
+            <div className="space-y-1">
+              <p className="text-sm text-primary font-bold uppercase tracking-wider">
+                Answered instantly — no voicemail
+              </p>
+              <p className="text-xs text-muted-foreground italic">
+                We only partner with serious contractors ready to dominate their local market.
+              </p>
+            </div>
+          </div>
           
-          <p className="mt-8 text-sm text-muted-foreground font-semibold uppercase tracking-widest">
+          <p className="mt-12 text-sm text-muted-foreground font-semibold uppercase tracking-widest">
             ● Exclusive Territory Protection ● No Ad Spend Required ● 100% Done-For-You
           </p>
         </motion.div>
