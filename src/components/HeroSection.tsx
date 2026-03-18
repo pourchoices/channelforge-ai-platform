@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone } from "lucide-material";
+import { ArrowRight, Phone } from "lucide-react";
 
 const HeroSection = () => {
   return (
