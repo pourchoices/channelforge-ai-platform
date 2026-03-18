@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, PhoneCall } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-material";
 
 const HeroSection = () => {
   return (
@@ -36,18 +36,21 @@ const HeroSection = () => {
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="hero" size="xl" className="btn-glow" asChild>
-              <a href="#city-availability">
-                See If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
+              <a href="tel:+14053381707">
+                Call Now to See If Your Area Is Available <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
-              <a href="https://calendly.com/channelforge/strategy-call">
-                <PhoneCall className="mr-2 h-5 w-5" /> Book a Quick Call
+              <a href="tel:+14053381707">
+                <Phone className="mr-2 h-5 w-5" /> (405) 338-1707
               </a>
             </Button>
           </div>
 
           <div className="space-y-3">
+            <p className="text-sm text-primary font-bold uppercase tracking-wider">
+              Answered instantly — no voicemail
+            </p>
             <p className="text-sm text-muted-foreground">
               Homeowners are already searching YouTube for your services every day.
             </p>
