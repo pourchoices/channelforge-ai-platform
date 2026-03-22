@@ -6,7 +6,7 @@ const features = [
   { icon: Bot, label: "AI receptionist answers homeowner calls 24/7" },
   { icon: ClipboardList, label: "Every call recorded and logged as a lead" },
   { icon: CalendarCheck, label: "Jobs booked automatically on your calendar" },
-  { icon: Database, label: "All leads managed in your GoHighLevel CRM" },
+  { icon: Database, label: "All leads managed in your Personal CRM" },
 ];
 
 const AILeadCapture = () => {
