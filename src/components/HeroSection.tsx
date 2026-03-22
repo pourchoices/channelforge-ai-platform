@@ -5,8 +5,9 @@ import { ArrowRight, Phone } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-primary/8 blur-[150px] animate-pulse-glow pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+      {/* Responsive Glows - Prevents Horizontal Scroll on Mobile */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] aspect-square rounded-full bg-primary/8 blur-[100px] md:blur-[150px] animate-pulse-glow pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-full max-w-[400px] aspect-square rounded-full bg-primary/5 blur-[80px] md:blur-[120px] pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -37,13 +38,13 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col items-center gap-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="xl" className="btn-glow" asChild>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
+            <Button variant="hero" size="xl" className="btn-glow w-full sm:w-auto" asChild>
               <a href="tel:+14053381707">
-                Call Now to See If Your Area Is Available <ArrowRight className="ml-2 h-5 w-5" />
+                Check Area Availability <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Button variant="hero-outline" size="xl" asChild>
+            <Button variant="hero-outline" size="xl" className="w-full sm:w-auto" asChild>
               <a href="tel:+14053381707">
                 <Phone className="mr-2 h-5 w-5" /> (405) 338-1707
               </a>
@@ -54,14 +55,14 @@ const HeroSection = () => {
             <p className="text-sm text-primary font-bold uppercase tracking-wider">
               Answered instantly — no voicemail
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs md:text-sm text-muted-foreground">
               Homeowners are already searching for your services online every day.
             </p>
-            <p className="text-xs font-medium text-foreground/80 flex items-center justify-center gap-4">
+            <div className="text-[10px] md:text-xs font-medium text-foreground/80 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
               <span>✔ No ads</span>
               <span>✔ No cold calling</span>
               <span>✔ No lead buying</span>
-            </p>
+            </div>
           </div>
         </div>
       </motion.div>
