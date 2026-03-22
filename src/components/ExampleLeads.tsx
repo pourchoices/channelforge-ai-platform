@@ -85,7 +85,7 @@ const ExampleLeads = () => {
 
           <div className="pt-8 border-t border-border/20 text-center">
             <h4 className="font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wide">
-              Typical Jobs Generated From YouTube Leads
+              Typical Jobs Generated From local Leads
             </h4>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {typicalJobs.map((job, idx) => (
