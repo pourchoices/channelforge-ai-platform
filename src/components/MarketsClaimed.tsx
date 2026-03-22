@@ -27,7 +27,7 @@ const MarketsClaimed = () => {
             Cities are being locked in by contractors right now.
           </p>
           <p className="text-muted-foreground">
-            Only one contractor per city can own the YouTube lead channel. Once claimed, it's gone for your competitors.
+            Only one contractor per city gets the calls. Once it’s claimed, it’s gone.
           </p>
         </motion.div>
 
