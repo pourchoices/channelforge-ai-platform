@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { TrendingUp, Users, ShieldCheck, Clock } from "lucide-react";
 
 const reasons = [
-  { icon: TrendingUp, text: "Search platforms are the second largest search engine — and homeowners use them every day to find repair help." },
+  { icon: TrendingUp, text: "Video platforms are the second largest search engine — and homeowners use them every day to find repair help." },
   { icon: Users, text: "A single helpful local channel can put your business in front of hundreds of local homeowners every month." },
   { icon: ShieldCheck, text: "Homeowners who view your content already trust you before they call — which means higher close rates." },
   { icon: Clock, text: "Unlike ads that disappear when you stop paying, our inbound call system generates opportunities for years." },
