@@ -21,23 +21,22 @@ const HeroSection = () => {
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 mb-8"
         >
           <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per City — Claim Yours</span>
+          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per Area — Claim Yours</span>
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
-          Own Your City's YouTube{" "}
-          <span className="gradient-text">Lead Channel</span> Before Your Competitor Does
+          We Generate Inbound Calls For Local Service Businesses — <span className="gradient-text">And Handle Them For You</span>
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 font-body">
-          We build and manage YouTube channels that bring homeowners actively searching for your services directly to your phone.
+          We build and manage local YouTube channels that bring in real calls from homeowners — then our system answers, qualifies, and sends you the opportunity.
         </p>
 
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="hero" size="xl" className="btn-glow" asChild>
               <a href="tel:+14053381707">
-                Call Now to See If Your Area Is Available <ArrowRight className="ml-2 h-5 w-5" />
+                Check If Your Area Is Available <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
@@ -57,7 +56,7 @@ const HeroSection = () => {
             <p className="text-xs font-medium text-foreground/80 flex items-center justify-center gap-4">
               <span>✔ No ads</span>
               <span>✔ No cold calling</span>
-              <span>✔ No lead buying</span>
+              <span>✔ Only one contractor per area</span>
             </p>
           </div>
         </div>
