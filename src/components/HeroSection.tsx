@@ -29,7 +29,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-body">
-          We build and manage the local channels that bring homeowners actively searching for your services directly to your phone.
+          We build and manage the call flow that brings homeowners actively searching for your services directly to your phone.
         </p>
 
         <p className="text-lg md:text-xl text-primary font-bold mb-10 font-body">
