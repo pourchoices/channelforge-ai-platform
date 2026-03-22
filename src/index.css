@@ -60,12 +60,22 @@
     @apply border-border;
   }
 
+  /* Prevent Body Overflow and improve mobile fit */
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-background text-foreground font-body antialiased overflow-x-hidden w-full;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
+  /* Fluid Typography for Mobile Fit */
+  h1 {
+    @apply text-[2.25rem] leading-[1.1] sm:text-5xl md:text-7xl font-black tracking-tight font-display;
+  }
+  
+  h2 {
+    @apply text-[1.85rem] leading-[1.2] sm:text-4xl md:text-5xl font-extrabold tracking-tight font-display;
+  }
+  
+  h3, h4, h5, h6 {
+    @apply text-[1.5rem] leading-[1.2] sm:text-2xl md:text-3xl font-bold tracking-tight font-display;
   }
 
   html {
@@ -122,8 +132,9 @@
     pointer-events: none;
   }
 
+  /* Responsive section padding */
   .section-padding {
-    @apply py-24 md:py-32 px-4;
+    @apply py-16 md:py-32 px-4;
   }
 
   .btn-glow {
