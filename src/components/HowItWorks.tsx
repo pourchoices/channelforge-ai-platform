@@ -5,27 +5,27 @@ const steps = [
   { 
     icon: Search, 
     title: "Find Searches",
-    description: "We find what homeowners are searching in your city"
+    description: "We find what homeowners are searching in your city" 
   },
   { 
     icon: Video, 
     title: "Create Assets",
-    description: "We create local content targeting those specific searches"
+    description: "We create local content targeting those specific searches" 
   },
   { 
     icon: Youtube, 
     title: "Rank Locally",
-    description: "Your business appears when homeowners search for help"
+    description: "Your business appears when homeowners search for help" 
   },
   { 
     icon: PhoneCall, 
     title: "Inbound Calls",
-    description: "Homeowners call you directly when they need a pro"
+    description: "Homeowners call you directly when they need a pro" 
   },
   { 
     icon: DollarSign, 
     title: "Close Jobs",
-    description: "You close high-value jobs from ready customers"
+    description: "You close high-value jobs from ready customers" 
   },
 ];
 
