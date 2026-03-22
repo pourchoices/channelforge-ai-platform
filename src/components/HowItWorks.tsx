@@ -20,7 +20,7 @@ const steps = [
   { 
     icon: PhoneCall, 
     title: "Inbound Calls",
-    description: "Homeowners call you directly when they need a pro" 
+    description: "Homeowners call directly when they find your channel" 
   },
   { 
     icon: DollarSign, 
