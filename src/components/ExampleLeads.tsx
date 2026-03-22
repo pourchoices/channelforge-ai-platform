@@ -51,7 +51,7 @@ const ExampleLeads = () => {
               <TrendingUp className="h-5 w-5 text-primary" />
             </div>
             <div>
-              <h3 className="font-display text-xl font-bold text-foreground">OKC HVAC Call Flow</h3>
+              <h3 className="font-display text-xl font-bold text-foreground">OKC HVAC Call Flow — 30 Day Results</h3>
               <p className="text-xs text-muted-foreground">30-day performance snapshot</p>
             </div>
           </div>
