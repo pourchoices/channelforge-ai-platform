@@ -32,15 +32,15 @@ const ExampleVideos = () => {
 
   return (
     <section className="section-padding bg-secondary/10">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 text-center">
+        <div className="mb-16">
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Proof of Work</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            Real Calls Generated From <span className="gradient-text">One Call Flow</span>
+            Real Calls Generated From <span className="gradient-text">One Local Channel</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 text-left">
           {videos.map((video, i) => (
             <motion.div
               key={i}
@@ -80,10 +80,8 @@ const ExampleVideos = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto text-center glass-card p-10 md:p-16 rounded-3xl border border-primary/20 bg-primary/5 relative overflow-hidden"
+          className="max-w-3xl mx-auto glass-card p-10 md:p-16 rounded-3xl border border-primary/20 bg-primary/5 relative overflow-hidden"
         >
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-          
           <h3 className="font-display text-3xl md:text-4xl font-black text-foreground mb-4">
             Want Calls Like This For Your Business?
           </h3>
@@ -91,7 +89,7 @@ const ExampleVideos = () => {
             We build high-converting local assets designed to bring you more calls and inbound opportunities.
           </p>
           
-          <Button variant="hero" size="xl" className="btn-glow" asChild>
+          <Button variant="hero" size="xl" className="btn-glow w-full sm:w-auto" asChild>
             <a href="#contact">
               Check If Your Area is Available <ArrowRight className="ml-2 h-5 w-5" />
             </a>
