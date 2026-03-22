@@ -25,12 +25,12 @@ const HeroSection = () => {
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
-          Own Your City's YouTube{" "}
+          Own Your City's {" "}
           <span className="gradient-text">Lead Channel</span> Before Your Competitor Does
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 font-body">
-          We build and manage YouTube channels that bring homeowners actively searching for your services directly to your phone.
+          We build and manage Lead channels that bring homeowners actively searching for your services directly to your phone.
         </p>
 
         <div className="flex flex-col items-center gap-6">
@@ -49,7 +49,7 @@ const HeroSection = () => {
 
           <div className="space-y-3">
             <p className="text-sm text-muted-foreground">
-              Homeowners are already searching YouTube for your services every day.
+              Homeowners are already searching for your services every day.
             </p>
             <p className="text-xs font-medium text-foreground/80 flex items-center justify-center gap-4">
               <span>✔ No ads</span>
