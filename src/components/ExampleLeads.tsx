@@ -28,11 +28,11 @@ const ExampleLeads = () => {
         >
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">REAL RESULTS</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            Real Inbound Calls From <span className="gradient-text">One YouTube Channel</span>
+            Real Inbound Calls From <span className="gradient-text">One Lead Channel</span>
           </h2>
           <div className="mt-4 space-y-2">
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Here’s what a single YouTube lead channel can produce for a local contractor in just one month.
+              Here’s what a single lead channel can produce for a local contractor in just one month.
             </p>
             <p className="text-primary font-semibold text-sm">
               No paid ads. No cold outreach. Just homeowners actively searching for help.
