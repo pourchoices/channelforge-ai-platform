@@ -1,31 +1,26 @@
 import { motion } from "framer-motion";
-import { Search, Video, Youtube, PhoneCall, DollarSign, ArrowDown } from "lucide-react";
+import { Search, Video, PhoneCall, DollarSign, ArrowDown, ShieldCheck } from "lucide-react";
 
 const steps = [
   { 
-    icon: Search, 
-    title: "Find Searches",
-    description: "We find what homeowners are searching in your city" 
-  },
-  { 
     icon: Video, 
-    title: "Create Videos",
-    description: "We create videos targeting those searches" 
-  },
-  { 
-    icon: Youtube, 
-    title: "Rank on YouTube",
-    description: "Your videos appear when homeowners search" 
+    title: "Create Local Content",
+    description: "We build a high-authority YouTube channel for your specific city and trade." 
   },
   { 
     icon: PhoneCall, 
-    title: "Inbound Calls",
-    description: "Homeowners call directly from the videos" 
+    title: "Generate Inbound Calls",
+    description: "Homeowners find your content when they have a problem, triggering direct inbound calls." 
+  },
+  { 
+    icon: ShieldCheck, 
+    title: "AI Answers and Qualifies",
+    description: "Our AI system handles the phone, answers questions, and qualifies the caller." 
   },
   { 
     icon: DollarSign, 
-    title: "Close Jobs",
-    description: "You close high-value jobs" 
+    title: "Send Opportunities to Contractor",
+    description: "Once a call is vetted as a real job, the opportunity is routed straight to you." 
   },
 ];
 
@@ -41,7 +36,7 @@ const HowItWorks = () => {
         >
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">The Process</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            How Our YouTube <span className="gradient-text">Lead Engine</span> Works
+            How Our YouTube <span className="gradient-text">Inbound Call Engine</span> Works
           </h2>
         </motion.div>
 
