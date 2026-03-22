@@ -8,7 +8,6 @@ const videos = [
     category: "HVAC",
     title: "Emergency AC Repair in Oklahoma city: 3 Signs You Need Help Fast",
     thumbnail: "/images/hvac-thumbnail.jpg",
-    // Reliable cloud fallback so the site stays professional if local paths fail
     fallback: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800",
     videoUrl: "https://www.youtube.com/embed/UQH0BStPFms?autoplay=1",
   },
@@ -35,9 +34,9 @@ const ExampleVideos = () => {
     <section className="section-padding bg-secondary/10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Content Strategy</p>
+          <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Proof of Work</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            The Type of Videos That <span className="gradient-text">Generate Calls</span>
+            Real Calls Generated From <span className="gradient-text">One Local Channel</span>
           </h2>
         </div>
 
@@ -52,14 +51,12 @@ const ExampleVideos = () => {
               className="group cursor-pointer"
               onClick={() => setSelectedVideo(video.videoUrl)}
             >
-              {/* Added a subtle background color to ensure container visibility */}
               <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 border border-border/50 bg-secondary/20 shadow-lg">
                 <img
                   src={video.thumbnail}
                   alt={video.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
-                    // This logic triggers if your custom images are missing from the /public/images folder
                     const target = e.target as HTMLImageElement;
                     if (target.src !== video.fallback) {
                       target.src = video.fallback;
@@ -88,15 +85,15 @@ const ExampleVideos = () => {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
           
           <h3 className="font-display text-3xl md:text-4xl font-black text-foreground mb-4">
-            Want Videos Like This For Your Business?
+            Want Calls Like This For Your Business?
           </h3>
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            We create high-converting local videos designed to bring you more calls and customers.
+            We build high-converting local assets designed to bring you more calls and inbound opportunities.
           </p>
           
           <Button variant="hero" size="xl" className="btn-glow" asChild>
             <a href="#contact">
-              Get Your First Video <ArrowRight className="ml-2 h-5 w-5" />
+              See If Your Area is Open <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </motion.div>
@@ -108,7 +105,7 @@ const ExampleVideos = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            className="fixed inset-0 z- flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
             onClick={() => setSelectedVideo(null)}
           >
             <motion.div
