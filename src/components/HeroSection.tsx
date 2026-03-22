@@ -21,7 +21,7 @@ const HeroSection = () => {
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 mb-8"
         >
           <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per Area — Claim Yours</span>
+          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per City — Claim Yours</span>
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
@@ -29,9 +29,9 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-body">
-          We build and manage the systems that bring homeowners actively searching for your services directly to your phone.
+          We build and manage the local channels that bring homeowners actively searching for your services directly to your phone.
         </p>
-        
+
         <p className="text-lg md:text-xl text-primary font-bold mb-10 font-body">
           You don’t chase leads. You answer qualified calls.
         </p>
@@ -55,7 +55,7 @@ const HeroSection = () => {
               Answered instantly — no voicemail
             </p>
             <p className="text-sm text-muted-foreground">
-              Homeowners are already searching for your services every day.
+              Homeowners are already searching for your services online every day.
             </p>
             <p className="text-xs font-medium text-foreground/80 flex items-center justify-center gap-4">
               <span>✔ No ads</span>
