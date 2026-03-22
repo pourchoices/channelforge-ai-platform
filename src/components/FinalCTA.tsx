@@ -13,10 +13,10 @@ const FinalCTA = () => {
           viewport={{ once: true }}
         >
           <h2 className="font-display text-4xl md:text-6xl font-black text-foreground mb-6 leading-tight">
-            Check If Your Area Is <span className="gradient-text">Available Before It's Gone</span>
+            Check If Your City Is <span className="gradient-text">Available Before It's Gone</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-            Once your city is taken, we don’t open it again.
+            Once a city is claimed, we do not open it again.
           </p>
           
           <div className="flex flex-col items-center justify-center gap-6">
