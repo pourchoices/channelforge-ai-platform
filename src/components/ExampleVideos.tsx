@@ -93,7 +93,7 @@ const ExampleVideos = () => {
           
           <Button variant="hero" size="xl" className="btn-glow" asChild>
             <a href="#contact">
-              See If Your Area is Open <ArrowRight className="ml-2 h-5 w-5" />
+              Check If Your Area is Available <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </motion.div>
