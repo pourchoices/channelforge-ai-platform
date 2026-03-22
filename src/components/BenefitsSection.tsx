@@ -15,7 +15,7 @@ const benefits = [
   {
     icon: Search,
     title: "High-Value Opportunities",
-    description: "Homeowners searching for repairs have higher intent than social media scrollers. They are ready to book a high-ticket job now."
+    description: "Customers searching for local repairs have higher intent than social media scrollers. They are ready to book a high-ticket job now."
   },
   {
     icon: Calendar,
