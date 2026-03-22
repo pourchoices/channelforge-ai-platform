@@ -24,7 +24,7 @@ const AILeadCapture = () => {
             Every Call <span className="gradient-text">Captured & Booked</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
-            When a homeowner calls from your Lead channel, our system answers, qualifies, and books the job — so you never lose a lead.
+            When a homeowner calls, our system answers, qualifies, and books the job — so you never miss an opportunity.
           </p>
         </motion.div>
 
