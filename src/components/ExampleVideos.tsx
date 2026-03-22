@@ -36,7 +36,7 @@ const ExampleVideos = () => {
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Proof of Work</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            Real Calls Generated From <span className="gradient-text">One Local Channel</span>
+            Real Calls Generated From <span className="gradient-text">One Call Flow</span>
           </h2>
         </div>
 
