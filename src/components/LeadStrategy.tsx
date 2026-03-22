@@ -10,7 +10,7 @@ const strategies = [
   {
     icon: Search,
     title: "Custom Channel Build",
-    description: "We build a dedicated YouTube engine from scratch designed specifically for your brand and market."
+    description: "We build a dedicated Lead engine from scratch designed specifically for your brand and market."
   },
   {
     icon: PhoneCall,
