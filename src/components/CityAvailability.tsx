@@ -26,11 +26,11 @@ const HeroSection = () => {
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
           Own Your City's {" "}
-          <span className="gradient-text">Lead Channel</span> Before Your Competitor Does
+          <span className="gradient-text">Call Flow</span> Before Your Competitor Does
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 font-body">
-          We build and manage Lead channels that bring homeowners actively searching for your services directly to your phone.
+          We build and manage call flows that bring homeowners actively searching for your services directly to your phone.
         </p>
 
         <div className="flex flex-col items-center gap-6">
