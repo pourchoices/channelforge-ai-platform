@@ -28,7 +28,7 @@ const ExampleLeads = () => {
         >
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">REAL RESULTS</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            Real Inbound Calls From <span className="gradient-text">One Call FLow</span>
+            Real Calls Generated From <span className="gradient-text">One Call FLow</span>
           </h2>
           <div className="mt-4 space-y-2">
             <p className="text-muted-foreground max-w-2xl mx-auto">
