@@ -37,6 +37,9 @@ const ExampleLeads = () => {
             <p className="text-primary font-semibold text-sm">
               No paid ads. No cold outreach. Just homeowners actively searching for help.
             </p>
+               <p className="text-center text-sm font-bold text-foreground mb-12">
+         We don’t just generate calls — we show you exactly what they turn into.
+          </p>
           </div>
         </motion.div>
 
@@ -100,11 +103,7 @@ const ExampleLeads = () => {
             </p>
           </div>
         </motion.div>
-       <p className="text-center text-sm font-bold text-foreground mb-12">
-         We don’t just generate calls — we show you exactly what they turn into.
-          </p>
-
-        <div className="flex justify-center mt-12">
+            <div className="flex justify-center mt-12">
           <Button variant="hero" size="xl" className="btn-glow" asChild>
             <a href="#city-availability">
               See If Your City Is Available <ArrowRight className="ml-2 h-5 w-5" />
