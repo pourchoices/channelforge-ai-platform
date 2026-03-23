@@ -24,7 +24,7 @@ const steps = [
   },
   { 
     icon: DollarSign, 
-    title: "Track Results",
+    title: "Results & Tracking",
     description: "Every call is recorded, tracked, and analyzed so you can see exactly how many turn into real jobs."
   },
 ];
@@ -41,7 +41,7 @@ const HowItWorks = () => {
         >
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">The Process</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            How Our <span className="gradient-text">Inbound Call Flow System</span> Works
+            How Our <span className="gradient-text">Call Flow System</span> Works
           </h2>
         </motion.div>
 
