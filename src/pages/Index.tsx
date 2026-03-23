@@ -1,18 +1,18 @@
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import MarketsClaimed from "@/components/MarketsClaimed";
 import BenefitsSection from "@/components/BenefitsSection";
 import HowItWorks from "@/components/HowItWorks";
 import ExampleVideos from "@/components/ExampleVideos";
+import CityAvailability from "@/components/CityAvailability";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
-import MarketsClaimed from "@/components/MarketsClaimed";
-import CityAvailability from "@/components/CityAvailability";
-import { motion } from "framer-motion";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Helmet>
         <title>ChannelForge | Tracked Inbound Call Flow Systems</title>
         <meta name="description" content="We build and manage tracked inbound call flows for local service businesses." />
@@ -26,7 +26,7 @@ const Index = () => {
       <ExampleVideos />
       <CityAvailability />
 
-      {/* NEW SECTION: Tracked Results Mini-Section */}
+      {/* Tracked Results Mini-Section */}
       <section className="section-padding bg-secondary/5">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <motion.div
