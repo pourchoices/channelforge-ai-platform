@@ -31,7 +31,7 @@ const ExampleVideos = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   return (
-    <section id="proof" className="section-padding bg-secondary/10">
+    <section className="section-padding bg-secondary/10">
       <div className="container mx-auto px-4 text-center">
         <div className="mb-16">
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Proof of Work</p>
@@ -79,7 +79,6 @@ const ExampleVideos = () => {
           ))}
         </div>
 
-        {/* Stats and Tracking Description */}
         <div className="mb-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="glass-card p-6 text-center">
@@ -96,7 +95,7 @@ const ExampleVideos = () => {
             </div>
           </div>
           <p className="text-primary font-bold">
-            We track every call, every job, and your close rate — then provide a clear monthly breakdown of what your call flow is actually producing.
+            We track every call, every job, and your close rate — then provide a clear monthly breakdown of exactly what your call flow is producing.
           </p>
         </div>
 
