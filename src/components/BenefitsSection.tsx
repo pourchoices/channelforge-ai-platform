@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { PhoneCall, MapPin, Search, Calendar } from "lucide-react";
+import { PhoneCall, MapPin, Search, Calendar, ShieldCheck } from "lucide-react";
 
 const benefits = [
   {
@@ -13,14 +13,14 @@ const benefits = [
     description: "We work with only one contractor per city. Once you claim your territory, your local competitors are permanently locked out."
   },
   {
-    icon: Search,
-    title: "High-Value Opportunities",
-    description: "Customers searching for local repairs have higher intent than social media scrollers. They are ready to book a high-ticket job now."
+    icon: ShieldCheck,
+    title: "Qualified Inbound Opportunities",
+    description: "We help qualify callers upfront so they understand your pricing structure (like dispatch fees) and are serious about booking."
   },
   {
     icon: Calendar,
     title: "Evergreen ROI",
-    description: "Unlike paid ads that stop the second you stop paying, this call generation system continues to work for years. It's an asset, not an expense."
+    description: "Unlike paid ads that stop the second you stop paying, this tracked call flow system continues to work for years. It's an asset, not an expense."
   }
 ];
 
@@ -33,6 +33,9 @@ const BenefitsSection = () => {
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
             The Most Powerful Way to <span className="gradient-text">Dominate Your Local Market</span>
           </h2>
+          <p className="mt-4 text-xl font-bold text-primary">
+            Most marketing companies stop at leads. We go all the way to revenue.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
