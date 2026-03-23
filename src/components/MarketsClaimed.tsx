@@ -5,67 +5,42 @@ import { Button } from "@/components/ui/button";
 const claimedMarkets = [
   { market: "Dallas Roofing", status: "claimed" },
   { market: "Phoenix HVAC", status: "claimed" },
-  { market: "Tulsa Plumbing", status: "available" },
-  { market: "OKC Pest Control", status: "available" },
-  { market: "Atlanta Landscaping", status: "claimed" },
+  { market: "Tulsa Plumbing", status: "claimed" },
+  { market: "Austin Landscaping", status: "claimed" },
 ];
 
 const MarketsClaimed = () => {
   return (
-    <section className="section-padding border-y border-border/40">
-      <div className="container mx-auto max-w-4xl px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="font-display text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-            Markets Being <span className="gradient-text">Claimed By Contractors</span>
+    <section className="py-20 bg-background/50 border-y border-border/40 overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="font-display text-2xl md:text-3xl font-black text-foreground mb-4 uppercase tracking-tight">
+            Most contractors start by claiming an existing call flow.
           </h2>
-          <p className="text-primary font-bold uppercase tracking-wide mb-2">
-            Cities are being locked in by contractors right now.
+          <p className="text-muted-foreground text-sm md:text-base font-medium">
+            Once an area is claimed, it's permanently locked out for all other contractors.
           </p>
-          <p className="text-muted-foreground">
-            Only one contractor per city gets the calls. Once it’s claimed, it’s gone.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {claimedMarkets.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className={`glass-card rounded-xl p-5 flex items-center justify-between ${
-                item.status === "claimed" ? "opacity-50 grayscale" : "border-primary/20 bg-primary/5 shadow-sm"
-              }`}
-            >
-              <div className="flex items-center gap-4">
-                <div className={`h-10 w-10 rounded-full flex items-center justify-center ${
-                  item.status === "claimed" ? "bg-muted" : "bg-primary/20"
-                }`}>
-                  {item.status === "claimed" ? <Lock className="h-4 w-4" /> : <MapPin className="h-4 w-4 text-primary" />}
-                </div>
-                <span className="font-display font-bold text-foreground">{item.market}</span>
-              </div>
-              <span className={`text-[10px] font-black uppercase tracking-widest ${
-                item.status === "available" ? "text-green-500" : "text-muted-foreground"
-              }`}>
-                {item.status === "available" ? "✓ Available" : "Claimed"}
-              </span>
-            </motion.div>
-          ))}
         </div>
 
-        <div className="text-center">
-          <Button variant="hero" size="xl" className="btn-glow" asChild>
-            <a href="#availability">
-              Check If Your City Is Still Available <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {claimedMarkets.map((m, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="glass-card p-4 flex flex-col items-center justify-center gap-3 bg-secondary/20 border-primary/10"
+            >
+              <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Lock className="h-5 w-5 text-primary" />
+              </div>
+              <div className="text-center">
+                <p className="text-xs font-black uppercase text-foreground/70 tracking-widest">{m.market}</p>
+                <p className="text-[10px] font-bold text-primary uppercase mt-0.5">{m.status}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
