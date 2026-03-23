@@ -31,16 +31,19 @@ const ExampleVideos = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   return (
-    <section className="section-padding bg-secondary/10">
+    <section id="proof" className="section-padding bg-secondary/10">
       <div className="container mx-auto px-4 text-center">
         <div className="mb-16">
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Proof of Work</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            Real Calls Generated From <span className="gradient-text">One Local Channel</span>
+            Real Calls Generated From <span className="gradient-text">One Call Flow</span>
           </h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+            Here’s what one tracked call flow can generate for a local contractor in just 30 days.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-left">
           {videos.map((video, i) => (
             <motion.div
               key={i}
@@ -74,6 +77,27 @@ const ExampleVideos = () => {
               </h3>
             </motion.div>
           ))}
+        </div>
+
+        {/* Stats and Tracking Description */}
+        <div className="mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="glass-card p-6 text-center">
+              <p className="text-4xl font-black text-primary mb-1">42</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Inbound Calls</p>
+            </div>
+            <div className="glass-card p-6 text-center">
+              <p className="text-4xl font-black text-primary mb-1">18</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Booked Jobs</p>
+            </div>
+            <div className="glass-card p-6 text-center">
+              <p className="text-4xl font-black text-primary mb-1">$24k+</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Est. Revenue</p>
+            </div>
+          </div>
+          <p className="text-primary font-bold">
+            We track every call, every job, and your close rate — then provide a clear monthly breakdown of what your call flow is actually producing.
+          </p>
         </div>
 
         <motion.div 
