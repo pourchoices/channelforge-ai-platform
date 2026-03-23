@@ -5,7 +5,6 @@ import { ArrowRight, Phone } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
-      {/* Responsive Glows - Prevents Horizontal Scroll on Mobile */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] aspect-square rounded-full bg-primary/8 blur-[100px] md:blur-[150px] animate-pulse-glow pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-full max-w-[400px] aspect-square rounded-full bg-primary/5 blur-[80px] md:blur-[120px] pointer-events-none" />
 
@@ -22,31 +21,35 @@ const HeroSection = () => {
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 mb-8"
         >
           <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-bold text-primary uppercase tracking-wider">Only One Contractor Per City — Claim Yours</span>
+          <span className="text-xs font-bold text-primary uppercase tracking-wider">
+            Only One Contractor Per City — Claim Yours
+          </span>
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] tracking-[-0.03em] text-foreground mb-6">
           Own Your City's <span className="gradient-text">Call Flow</span> Before Your Competitor Does
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-body">
-          We generate inbound calls — then track and qualify every opportunity so you know exactly what it's producing.
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-5 font-body">
+          We generate inbound customer calls — then track and qualify every opportunity so you know exactly what it’s producing.
         </p>
-        
+
+        <p className="text-base md:text-lg text-foreground/90 max-w-3xl mx-auto mb-5 font-medium font-body">
+          Every call is recorded, tracked, and measured — so you know what turns into real jobs.
+        </p>
+
         <p className="text-lg md:text-xl text-primary font-bold mb-10 font-body">
           You don’t chase leads. You answer qualified calls.
         </p>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-body">
-          Every call is recorded, tracked, and measured — so you know what turns into real jobs.
-        </p>
-          
+
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
             <Button variant="hero" size="xl" className="btn-glow w-full sm:w-auto" asChild>
               <a href="tel:+14053381707">
-                Check Area Availability <ArrowRight className="ml-2 h-5 w-5" />
+                See If Your Area Is Still Available <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
+
             <Button variant="hero-outline" size="xl" className="w-full sm:w-auto" asChild>
               <a href="tel:+14053381707">
                 <Phone className="mr-2 h-5 w-5" /> (405) 338-1707
@@ -58,9 +61,11 @@ const HeroSection = () => {
             <p className="text-sm text-primary font-bold uppercase tracking-wider">
               Answered instantly — no voicemail
             </p>
+
             <p className="text-xs md:text-sm text-muted-foreground">
               Homeowners are already searching for your services online every day.
             </p>
+
             <div className="text-[10px] md:text-xs font-medium text-foreground/80 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
               <span>✔ No ads</span>
               <span>✔ No cold calling</span>
