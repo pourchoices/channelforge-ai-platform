@@ -30,7 +30,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-body">
-          We build and manage local call flows that generate real inbound calls — then track, qualify, and measure every opportunity so you know exactly what it’s producing.
+          We generate inbound calls — then track and qualify every opportunity so you know exactly what it's producing.
         </p>
         
         <p className="text-lg md:text-xl text-primary font-bold mb-10 font-body">
