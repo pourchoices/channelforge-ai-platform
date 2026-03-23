@@ -31,15 +31,11 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-5 font-body">
-          We generate inbound customer calls — then track and qualify every opportunity so you know exactly what it’s producing.
-        </p>
-
-        <p className="text-base md:text-lg text-foreground/90 max-w-3xl mx-auto mb-5 font-medium font-body">
-          Every call is recorded, tracked, and measured — so you know what turns into real jobs.
+          We generate inbound customer calls — and track every opportunity from call to job so you know exactly what it’s producing.
         </p>
 
         <p className="text-lg md:text-xl text-primary font-bold mb-10 font-body">
-          You don’t chase leads. You answer qualified calls.
+          Stop chasing leads. Start answering qualified calls.
         </p>
 
         <div className="flex flex-col items-center gap-6">
