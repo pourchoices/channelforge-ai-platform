@@ -33,7 +33,7 @@ const BenefitsSection = () => {
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
             The Most Powerful Way to <span className="gradient-text">Dominate Your Local Market</span>
           </h2>
-          <p className="mt-4 text-xl font-bold text-primary">
+          <p className="mt-4 text-xl font-bold text-primary italic">
             Most marketing companies stop at leads. We go all the way to revenue.
           </p>
         </div>
