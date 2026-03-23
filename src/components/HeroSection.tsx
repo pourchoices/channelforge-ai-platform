@@ -36,7 +36,10 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl text-primary font-bold mb-10 font-body">
           You don’t chase leads. You answer qualified calls.
         </p>
-
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-body">
+          Every call is recorded, tracked, and measured — so you know what turns into real jobs.
+        </p>
+          
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
             <Button variant="hero" size="xl" className="btn-glow w-full sm:w-auto" asChild>
