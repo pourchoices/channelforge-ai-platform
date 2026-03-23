@@ -5,7 +5,6 @@ import { ArrowRight, Phone } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center section-padding pt-32 overflow-hidden">
-      {/* Responsive Glows - Prevents Horizontal Scroll on Mobile */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] aspect-square rounded-full bg-primary/8 blur-[100px] md:blur-[150px] animate-pulse-glow pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-full max-w-[400px] aspect-square rounded-full bg-primary/5 blur-[80px] md:blur-[120px] pointer-events-none" />
 
@@ -30,7 +29,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-body">
-          We build and manage the local channels that bring homeowners actively searching for your services directly to your phone.
+          We build and manage local call flows that bring in real inbound calls — then track, qualify, and measure every opportunity so you know exactly what it’s producing.
         </p>
         
         <p className="text-lg md:text-xl text-primary font-bold mb-10 font-body">
