@@ -32,7 +32,7 @@ const ExampleLeads = () => {
           </h2>
           <div className="mt-4 space-y-2">
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Here’s what one call flow can generate for a local contractor in just 30 days.
+              Here’s what a single call flow can generate — and track — for a local contractor in just 30 days.
             </p>
             <p className="text-primary font-semibold text-sm">
               No paid ads. No cold outreach. Just homeowners actively searching for help.
@@ -80,12 +80,12 @@ const ExampleLeads = () => {
           </div>
           
           <p className="text-center text-sm font-bold text-foreground mb-12">
-            That’s thousands in booked jobs from a single channel.
+            That’s real calls turning into booked jobs — fully tracked from first call to revenue.
           </p>
 
           <div className="pt-8 border-t border-border/20 text-center">
             <h4 className="font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wide">
-              Typical Jobs Generated From local Leads
+              Typical Jobs Generated From Inbound Calls
             </h4>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {typicalJobs.map((job, idx) => (
@@ -100,6 +100,9 @@ const ExampleLeads = () => {
             </p>
           </div>
         </motion.div>
+       <p className="text-center text-sm font-bold text-foreground mb-12">
+         We don’t just generate calls — we show you exactly what they turn into.
+          </p>
 
         <div className="flex justify-center mt-12">
           <Button variant="hero" size="xl" className="btn-glow" asChild>
