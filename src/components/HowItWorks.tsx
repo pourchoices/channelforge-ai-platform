@@ -5,27 +5,27 @@ const steps = [
   { 
     icon: Search, 
     title: "Find Searches",
-    description: "We find what homeowners are searching in your city" 
+    description: "We find what homeowners are searching in your city"
   },
   { 
     icon: Video, 
     title: "Create Assets",
-    description: "We create local content targeting those specific searches" 
+    description: "We create local content targeting those specific searches"
   },
   { 
     icon: Youtube, 
     title: "Rank Locally",
-    description: "Your business appears when homeowners search for help" 
+    description: "Your business appears when homeowners search for help"
   },
   { 
     icon: PhoneCall, 
     title: "Inbound Calls",
-    description: "Homeowners call directly when they find your channel" 
+    description: "Homeowners call you directly when they find your channel"
   },
   { 
     icon: DollarSign, 
-    title: "Close Jobs",
-    description: "You close high-value jobs from ready customers" 
+    title: "Track Results",
+    description: "Every call is recorded, tracked, and analyzed so you can see exactly how many turn into real jobs."
   },
 ];
 
@@ -41,7 +41,7 @@ const HowItWorks = () => {
         >
           <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">The Process</p>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground tracking-[-0.02em]">
-            How Our <span className="gradient-text">Inbound Call Engine</span> Works
+            How Our <span className="gradient-text">Inbound Call Flow System</span> Works
           </h2>
         </motion.div>
 
