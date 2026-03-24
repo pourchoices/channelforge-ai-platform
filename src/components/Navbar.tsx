@@ -1,66 +1,56 @@
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, PhoneCall } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "py-3 glass shadow-lg" : "py-5 bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <div 
-          className="flex items-center gap-1.5 md:gap-2 group cursor-pointer" 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >
-          <div className="h-8 w-8 md:h-10 md:w-10 rounded-lg md:rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
-            <PhoneCall className="text-white h-5 w-5 md:h-6 md:w-6" />
-          </div>
-          <span className="font-display text-lg md:text-xl font-black tracking-tight text-foreground uppercase">
-            CHANNEL<span className="text-primary">FORGE</span>
-          </span>
-        </div>
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
+      <div className="container mx-auto px-4">
+        <div className="flex h-20 items-center justify-between">
+          <a href="#" className="flex items-center gap-3 shrink-0">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary shadow-lg shadow-primary/20">
+              <Phone className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <span className="text-2xl font-black tracking-tight text-foreground">
+              CHANNEL<span className="text-primary">FORGE</span>
+            </span>
+          </a>
 
-        <div className="hidden md:flex items-center gap-8">
-          <Button variant="hero" size="sm" className="btn-glow px-6" asChild>
-            <a href="tel:+14053381707">
-              <Phone className="mr-2 h-4 w-4" /> (405) 338-1707
+          <nav className="hidden md:flex items-center gap-8">
+            <a
+              href="#benefits"
+              className="text-sm font-semibold text-foreground/80 transition-colors hover:text-primary"
+            >
+              Benefits
             </a>
-          </Button>
-        </div>
+            <a
+              href="#how-it-works"
+              className="text-sm font-semibold text-foreground/80 transition-colors hover:text-primary"
+            >
+              How It Works
+            </a>
+            <a
+              href="#proof"
+              className="text-sm font-semibold text-foreground/80 transition-colors hover:text-primary"
+            >
+              Proof
+            </a>
+            <a
+              href="#availability"
+              className="text-sm font-semibold text-foreground/80 transition-colors hover:text-primary"
+            >
+              Availability
+            </a>
+          </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-foreground p-1"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
+          <a
+            href="tel:+14053381707"
+            className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/25 transition hover:opacity-95"
+          >
+            <Phone className="h-4 w-4" />
+            (405) 338-1707
+          </a>
+        </div>
       </div>
-
-      {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 glass border-b border-border/40 p-6 animate-in fade-in slide-in-from-top-4">
-          <Button variant="hero" className="w-full text-lg h-14" asChild>
-            <a href="tel:+14053381707">
-              <Phone className="mr-3 h-6 w-6" /> Call (405) 338-1707
-            </a>
-          </Button>
-        </div>
-      )}
-    </nav>
+    </header>
   );
 };
 
