@@ -41,6 +41,7 @@ const Navbar = () => {
           </Button>
         </div>
 
+        {/* Mobile Menu Toggle */}
         <button
           className="md:hidden text-foreground p-1"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -49,6 +50,7 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 glass border-b border-border/40 p-6 animate-in fade-in slide-in-from-top-4">
           <Button variant="hero" className="w-full text-lg h-14" asChild>
