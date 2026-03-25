@@ -22,7 +22,7 @@ const Navbar = () => {
               Benefits
             </a>
             <a
-              href="#how-it-works"
+              href="#HowItWorks"
               className="text-sm font-semibold text-foreground/80 transition-colors hover:text-primary"
             >
               How It Works
@@ -34,10 +34,10 @@ const Navbar = () => {
               Proof
             </a>
             <a
-              href="#availability"
+              href="#Cityavailability"
               className="text-sm font-semibold text-foreground/80 transition-colors hover:text-primary"
             >
-              Availability
+              City Availability
             </a>
           </nav>
 
